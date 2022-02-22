@@ -1,0 +1,38 @@
+[package]
+name = "cumulus-test-client"
+version = "0.1.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+
+[dependencies]
+sc-service = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-consensus = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-block-builder = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-executor = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-executor-common = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+axlib-test-client = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-core = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-keyring = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-blockchain = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-inherents = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-io = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-timestamp = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+frame-system = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+pallet-transaction-payment = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+pallet-balances = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+
+# Cumulus deps
+cumulus-test-runtime = { path = "../runtime" }
+cumulus-test-service = { path = "../service" }
+cumulus-test-relay-sproof-builder = { path = "../relay-sproof-builder" }
+cumulus-primitives-core = { path = "../../primitives/core" }
+cumulus-primitives-allychain-inherent = { path = "../../primitives/allychain-inherent" }
+
+# AXIA deps
+axia-primitives = { git = "https://github.com/axia-tech/axia", branch = "dev" }
+axia-allychain = { git = "https://github.com/axia-tech/axia", branch = "dev" }
+
+# Other deps
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.0", default-features = false, features = [ "derive" ] }

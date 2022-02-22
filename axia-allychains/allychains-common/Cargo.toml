@@ -1,0 +1,64 @@
+[package]
+name = "allychains-common"
+version = "1.0.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+description = "Logic which is common to all allychain runtimes"
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+[dependencies]
+# External dependencies
+codec = { git = "https://github.com/axia-tech/axia-scale-codec", branch = "v2.3.1", package = 'axia-scale-codec', version = '2.3.1', features = ['derive'], default-features = false }
+scale-info = { git = "https://github.com/axia-tech/scale-info", branch = "v1.0.0", version = "1.0.0", default-features = false, features = ["derive"] }
+
+# Axlib dependencies
+sp-consensus-aura = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+sp-std = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+sp-io = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+frame-executive = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+frame-support = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+frame-system = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+pallet-assets = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+pallet-authorship = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+pallet-balances = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+sp-runtime = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+sp-core = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+
+# AXIA dependencies
+axia-runtime-common = { git = 'https://github.com/axia-tech/axia', default-features = false , branch = "dev" }
+axia-primitives = { git = 'https://github.com/axia-tech/axia', default-features = false , branch = "dev" }
+xcm = { git = 'https://github.com/axia-tech/axia', default-features = false , branch = "dev" }
+xcm-executor = { git = 'https://github.com/axia-tech/axia', default-features = false , branch = "dev" }
+
+# Local dependencies
+pallet-asset-tx-payment = { path = '../../pallets/asset-tx-payment', default-features = false }
+pallet-collator-selection = { path = '../../pallets/collator-selection', default-features = false }
+
+[dev-dependencies]
+sp-io = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+pallet-authorship = { git = 'https://github.com/axia-tech/axlib', default-features = false , branch = "dev" }
+
+[build-dependencies]
+axlib-wasm-builder = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+
+[features]
+default = ["std"]
+std = [
+	'codec/std',
+	'scale-info/std',
+	'sp-consensus-aura/std',
+	'sp-std/std',
+	'sp-io/std',
+	'frame-support/std',
+	'frame-executive/std',
+	'frame-system/std',
+	'pallet-asset-tx-payment/std',
+	'pallet-collator-selection/std',
+	'pallet-assets/std',
+	'pallet-authorship/std',
+	'pallet-balances/std',
+	'axia-runtime-common/std',
+	'axia-primitives/std',
+]

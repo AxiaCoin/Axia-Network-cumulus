@@ -1,0 +1,30 @@
+[package]
+name = "cumulus-test-relay-sproof-builder"
+version = '0.1.0'
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = '2018'
+
+[dependencies]
+# Other dependencies
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.0", default-features = false, features = [ "derive" ] }
+
+# Axlib dependencies
+sp-state-machine = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-std = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+
+# AXIA dependencies
+axia-primitives = { git = "https://github.com/axia-tech/axia", default-features = false, branch = "dev" }
+
+# Cumulus dependencies
+cumulus-primitives-core = { path = "../../primitives/core", default-features = false }
+
+[features]
+default = [ "std" ]
+std = [
+	"codec/std",
+	"sp-state-machine/std",
+	"sp-runtime/std",
+	"sp-std/std",
+	"cumulus-primitives-core/std",
+]

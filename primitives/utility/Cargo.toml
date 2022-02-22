@@ -1,0 +1,38 @@
+[package]
+name = "cumulus-primitives-utility"
+version = "0.1.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+
+[dependencies]
+# Axlib dependencies
+sp-std = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-trie = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+frame-support = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+
+# AXIA dependencies
+axia-allychain = { git = "https://github.com/axia-tech/axia", default-features = false, branch = "dev" }
+axia-primitives = { git = "https://github.com/axia-tech/axia", default-features = false, branch = "dev" }
+axlib-primitives = { git = "https://github.com/axia-tech/axia", default-features = false, branch = "dev" }
+xcm = { git = "https://github.com/axia-tech/axia", default-features = false, branch = "dev" }
+
+cumulus-primitives-core = { path = "../core", default-features = false }
+
+# Other dependencies
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.0", default-features = false, features = [ "derive" ] }
+
+
+[features]
+default = [ "std" ]
+std = [
+	"codec/std",
+	"sp-std/std",
+	"axia-primitives/std",
+	"axia-allychain/std",
+	"axlib-primitives/std",
+	"sp-runtime/std",
+	"sp-trie/std",
+	"frame-support/std",
+	"cumulus-primitives-core/std",
+]

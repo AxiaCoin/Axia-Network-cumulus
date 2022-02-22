@@ -1,0 +1,144 @@
+[package]
+name = "allychain-template-runtime"
+version = "0.1.0"
+authors = ["Anonymous"]
+description = "A new Cumulus FRAME-based Axlib Runtime, ready for hacking together a allychain."
+license = "Unlicense"
+homepage = "https://axlib.io"
+repository = "https://github.com/axiatech/cumulus/"
+edition = "2018"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+axlib-wasm-builder = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+
+[dependencies]
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.1", default-features = false, features = ["derive"]}
+log = { version = "0.4.14", default-features = false }
+scale-info = { git = "https://github.com/axia-tech/scale-info", branch = "v1.0.0", version = "1.0.0", default-features = false, features = ["derive"] }
+serde = { version = "1.0.119", optional = true, features = ["derive"] }
+smallvec = "1.6.1"
+
+# Local Dependencies
+pallet-template = { path = "../pallets/template", default-features = false }
+
+# Axlib Dependencies
+## Axlib Primitive Dependencies
+sp-api = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-block-builder = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-consensus-aura = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-core = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-inherents = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-io = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-offchain = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-session = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-std = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-transaction-pool = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-version = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+
+## Axlib FRAME Dependencies
+frame-benchmarking = { git = "https://github.com/axia-tech/axlib", default-features = false, optional = true , branch = "dev" }
+frame-executive = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+frame-support = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+frame-system = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+frame-system-benchmarking = { git = "https://github.com/axia-tech/axlib", default-features = false, optional = true , branch = "dev" }
+frame-system-rpc-runtime-api = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+
+## Axlib Pallet Dependencies
+pallet-aura = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+pallet-authorship = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+pallet-balances = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+pallet-randomness-collective-flip = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+pallet-session = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+pallet-sudo = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+pallet-timestamp = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+pallet-transaction-payment = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+
+# Cumulus dependencies
+cumulus-pallet-aura-ext = { path = "../../pallets/aura-ext", default-features = false }
+cumulus-pallet-dmp-queue = { path = "../../pallets/dmp-queue", default-features = false }
+cumulus-pallet-allychain-system = { path = "../../pallets/allychain-system", default-features = false }
+cumulus-pallet-xcm = { path = "../../pallets/xcm", default-features = false }
+cumulus-pallet-xcmp-queue = { path = "../../pallets/xcmp-queue", default-features = false }
+cumulus-primitives-core = { path = "../../primitives/core", default-features = false }
+cumulus-primitives-timestamp = { path = "../../primitives/timestamp", default-features = false }
+cumulus-primitives-utility = { path = "../../primitives/utility", default-features = false }
+pallet-collator-selection = { path = "../../pallets/collator-selection", default-features = false }
+allychain-info = { path = "../../axia-allychains/pallets/allychain-info", default-features = false }
+
+# AXIA Dependencies
+pallet-xcm = { git = "https://github.com/axia-tech/axia", default-features = false , branch = "dev" }
+axia-allychain = { git = "https://github.com/axia-tech/axia", default-features = false , branch = "dev" }
+axia-runtime-common = { git = "https://github.com/axia-tech/axia", default-features = false, branch = "dev" }
+xcm = { git = "https://github.com/axia-tech/axia", default-features = false , branch = "dev" }
+xcm-builder = { git = "https://github.com/axia-tech/axia", default-features = false , branch = "dev" }
+xcm-executor = { git = "https://github.com/axia-tech/axia", default-features = false , branch = "dev" }
+
+[features]
+default = [
+	"std",
+]
+std = [
+	"codec/std",
+	"serde",
+	"scale-info/std",
+	"log/std",
+	"sp-api/std",
+	"sp-block-builder/std",
+	"sp-consensus-aura/std",
+	"sp-core/std",
+	"sp-inherents/std",
+	"sp-io/std",
+	"sp-offchain/std",
+	"sp-runtime/std",
+	"sp-session/std",
+	"sp-std/std",
+	"sp-transaction-pool/std",
+	"sp-version/std",
+	"frame-executive/std",
+	"frame-support/std",
+	"frame-system/std",
+	"pallet-aura/std",
+	"pallet-authorship/std",
+	"pallet-balances/std",
+	"pallet-collator-selection/std",
+	"pallet-randomness-collective-flip/std",
+	"pallet-session/std",
+	"pallet-sudo/std",
+	"pallet-template/std",
+	"pallet-timestamp/std",
+	"pallet-transaction-payment-rpc-runtime-api/std",
+	"pallet-transaction-payment/std",
+	"cumulus-pallet-aura-ext/std",
+	"cumulus-pallet-allychain-system/std",
+	"cumulus-pallet-xcm/std",
+	"cumulus-pallet-xcmp-queue/std",
+	"cumulus-primitives-core/std",
+	"cumulus-primitives-timestamp/std",
+	"cumulus-primitives-utility/std",
+	"cumulus-pallet-dmp-queue/std",
+	"allychain-info/std",
+	"axia-allychain/std",
+	"axia-runtime-common/std",
+	"xcm-builder/std",
+	"xcm-executor/std",
+	"xcm/std",
+]
+
+runtime-benchmarks = [
+	"sp-runtime/runtime-benchmarks",
+	"xcm-builder/runtime-benchmarks",
+	"frame-benchmarking",
+	"frame-system-benchmarking",
+	"frame-support/runtime-benchmarks",
+	"frame-system/runtime-benchmarks",
+	"pallet-balances/runtime-benchmarks",
+	"pallet-collator-selection/runtime-benchmarks",
+	"pallet-template/runtime-benchmarks",
+	"pallet-timestamp/runtime-benchmarks",
+	"pallet-xcm/runtime-benchmarks",
+]

@@ -1,0 +1,9 @@
+[package]
+name = "cumulus-test-relay-validation-worker-provider"
+version = "0.1.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+build = "build.rs"
+
+[dependencies]
+axia-node-core-pvf = { git = "https://github.com/axia-tech/axia", branch = "dev" }

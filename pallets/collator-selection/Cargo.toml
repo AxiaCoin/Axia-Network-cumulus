@@ -1,0 +1,62 @@
+[package]
+authors = ['Anonymous']
+description = 'Simple staking pallet with a fixed stake.'
+edition = '2018'
+homepage = 'https://axlib.io'
+license = 'Apache-2.0'
+name = 'pallet-collator-selection'
+readme = 'README.md'
+repository = 'https://github.com/axiatech/cumulus/'
+version = '3.0.0'
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+[dependencies]
+log = { version = "0.4.0", default-features = false }
+codec = { git = "https://github.com/axia-tech/axia-scale-codec", branch = "v2.3.1", default-features = false, features = ['derive'], package = 'axia-scale-codec', version = '2.3.1' }
+rand = { version = "0.7.2", default-features = false }
+scale-info = { git = "https://github.com/axia-tech/scale-info", branch = "v1.0.0", version = "1.0.0", default-features = false, features = ["derive"] }
+serde = { version = "1.0.119", default-features = false }
+
+sp-std = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+sp-runtime = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+sp-staking = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+frame-support = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+frame-system = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+pallet-authorship = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+pallet-session = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+
+frame-benchmarking = { default-features = false, optional = true, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+
+[dev-dependencies]
+sp-core = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+sp-io = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+sp-tracing = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+sp-runtime = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+pallet-timestamp = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+sp-consensus-aura = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+pallet-balances = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+pallet-aura = { git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+
+[features]
+default = ['std']
+runtime-benchmarks = [
+	'frame-benchmarking',
+	'frame-support/runtime-benchmarks',
+	'frame-system/runtime-benchmarks',
+]
+std = [
+	'codec/std',
+	'log/std',
+	'scale-info/std',
+	'rand/std',
+	'sp-runtime/std',
+	'sp-staking/std',
+	'sp-std/std',
+	'frame-support/std',
+	'frame-system/std',
+	'frame-benchmarking/std',
+	'pallet-authorship/std',
+	'pallet-session/std',
+]

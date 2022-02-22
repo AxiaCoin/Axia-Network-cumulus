@@ -1,0 +1,45 @@
+[package]
+name = "cumulus-client-collator"
+version = "0.1.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+
+[dependencies]
+# Axlib dependencies
+sp-runtime = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-core = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-consensus = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-client-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+
+# AXIA dependencies
+axia-primitives = { git = "https://github.com/axia-tech/axia", branch = "dev" }
+axia-node-primitives = { git = "https://github.com/axia-tech/axia", branch = "dev" }
+axia-overseer = { git = "https://github.com/axia-tech/axia", branch = "dev" }
+axia-node-subsystem = { git = "https://github.com/axia-tech/axia", branch = "dev" }
+
+# Cumulus dependencies
+cumulus-client-network = { path = "../network" }
+cumulus-client-consensus-common = { path = "../consensus/common" }
+cumulus-primitives-core = { path = "../../primitives/core" }
+
+# Other dependencies
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.0", features = [ "derive" ] }
+futures = { version = "0.3.1", features = ["compat"] }
+parking_lot = "0.10.2"
+tracing = "0.1.25"
+
+[dev-dependencies]
+# AXIA dependencies
+axia-node-subsystem-test-helpers = { git = "https://github.com/axia-tech/axia", branch = "dev" }
+
+# Cumulus dependencies
+cumulus-test-runtime = { path = "../../test/runtime" }
+cumulus-test-client = { path = "../../test/client" }
+# Axlib dependencies
+
+sp-state-machine = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-tracing = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+
+# Other dependencies
+async-trait = "0.1.42"

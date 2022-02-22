@@ -1,0 +1,9 @@
+.git
+**/target/
+**/*.txt
+**/*.md
+/docker/
+!/target/release/axia-collator
+
+# axcfiles in the repo root
+/.*

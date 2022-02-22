@@ -1,0 +1,37 @@
+[package]
+name = "cumulus-pallet-session-benchmarking"
+version = "3.0.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+license = "Apache-2.0"
+homepage = "https://axlib.io"
+repository = "https://github.com/axiatech/cumulus/"
+description = "FRAME sessions pallet benchmarking for statemint"
+readme = "README.md"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+sp-std = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+sp-runtime = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+frame-support = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+frame-system = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+frame-benchmarking = { default-features = false, optional = true, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+pallet-session = { default-features = false, git = 'https://github.com/axia-tech/axlib', branch = "dev" }
+
+[features]
+default = ["std"]
+runtime-benchmarks = [
+	'frame-benchmarking',
+	'frame-support/runtime-benchmarks',
+	'frame-system/runtime-benchmarks',
+]
+std = [
+	"sp-std/std",
+	"sp-runtime/std",
+	"frame-system/std",
+	"frame-benchmarking/std",
+	"frame-support/std",
+	"pallet-session/std",
+]

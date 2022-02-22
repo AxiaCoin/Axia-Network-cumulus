@@ -1,0 +1,38 @@
+[package]
+name = "cumulus-client-consensus-aura"
+description = "AURA consensus algorithm for allychains"
+version = "0.1.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+
+[dependencies]
+# Axlib dependencies
+sp-consensus = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-inherents = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-core = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-blockchain = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-block-builder = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-consensus-aura = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-keystore = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-application-crypto = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-client-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-consensus-aura = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-consensus-slots = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-telemetry = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-consensus = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+axlib-prometheus-endpoint = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+
+# AXIA dependencies
+axia-client = { git = "https://github.com/axia-tech/axia", branch = "dev" }
+
+# Cumulus dependencies
+cumulus-client-consensus-common = { path = "../common" }
+cumulus-primitives-core = { path = "../../../primitives/core" }
+
+# Other deps
+futures = { version = "0.3.8", features = ["compat"] }
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.0", features = [ "derive" ] }
+tracing = "0.1.22"
+async-trait = "0.1.42"

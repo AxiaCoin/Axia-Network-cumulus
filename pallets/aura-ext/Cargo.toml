@@ -1,0 +1,41 @@
+[package]
+name = "cumulus-pallet-aura-ext"
+version = "0.1.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+description = "AURA consensus extension pallet for allychains"
+
+[dependencies]
+# Axlib dependencies
+frame-support = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+frame-system = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+frame-executive = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+pallet-aura = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-consensus-aura = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-std = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-application-crypto = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+
+# Other Dependencies
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.0", default-features = false, features = ["derive"]}
+scale-info = { git = "https://github.com/axia-tech/scale-info", branch = "v1.0.0", version = "1.0.0", default-features = false, features = ["derive"] }
+serde = { version = "1.0.101", optional = true, features = ["derive"] }
+
+[dev-dependencies]
+cumulus-pallet-allychain-system = { path = "../allychain-system" }
+
+[features]
+default = [ "std" ]
+std = [
+	"codec/std",
+	"scale-info/std",
+	"serde",
+	"frame-support/std",
+	"sp-runtime/std",
+	"sp-std/std",
+	"frame-system/std",
+	"frame-executive/std",
+	"pallet-aura/std",
+	"sp-consensus-aura/std",
+	"sp-application-crypto/std",
+]

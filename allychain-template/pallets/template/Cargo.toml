@@ -1,0 +1,37 @@
+[package]
+name = "pallet-template"
+authors = ["Anonymous"]
+description = "FRAME pallet template for defining custom runtime logic."
+version = "0.1.0"
+license = "Unlicense"
+homepage = "https://axlib.io"
+repository = "https://github.com/axia-tech/axlib/"
+edition = "2018"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.1", features = ["derive"], default-features = false }
+scale-info = { git = "https://github.com/axia-tech/scale-info", branch = "v1.0.0", version = "1.0.0", default-features = false, features = ["derive"] }
+
+frame-benchmarking = { git = "https://github.com/axia-tech/axlib", default-features = false, optional = true , branch = "dev" }
+frame-support = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+frame-system = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+
+[dev-dependencies]
+serde = { version = "1.0.119" }
+sp-core = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+sp-io = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+
+[features]
+default = ["std"]
+runtime-benchmarks = ["frame-benchmarking"]
+std = [
+	"codec/std",
+	"scale-info/std",
+	"frame-support/std",
+	"frame-system/std",
+	"frame-benchmarking/std",
+]

@@ -1,0 +1,38 @@
+[package]
+name = "cumulus-primitives-timestamp"
+version = "0.1.0"
+authors = ["Axia Technologies <admin@axiacoin.network>"]
+edition = "2018"
+description = "Provides timestamp related functionality for allychains."
+
+[dependencies]
+# Axlib dependencies
+sp-timestamp = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-inherents = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-std = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+
+# Cumulus dependencies
+cumulus-primitives-core = { path = "../core", default-features = false }
+
+[dev-dependencies]
+# Axlib dependencies
+sp-tracing = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-consensus = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+
+# Cumulus dependencies
+cumulus-test-client = { path = "../../test/client" }
+cumulus-test-relay-sproof-builder = { path = "../../test/relay-sproof-builder" }
+
+# Other deps
+codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.0", default-features = false, features = [ "derive" ] }
+futures = "0.3.5"
+
+[features]
+default = [ "std" ]
+std = [
+	"sp-timestamp/std",
+	"sp-inherents/std",
+	"sp-std/std",
+	"cumulus-primitives-core/std",
+]
