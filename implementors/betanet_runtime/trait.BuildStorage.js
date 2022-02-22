@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["betanet_runtime"] = [{"text":"impl <a class=\"trait\" href=\"betanet_runtime/trait.BuildStorage.html\" title=\"trait betanet_runtime::BuildStorage\">BuildStorage</a> for <a class=\"struct\" href=\"betanet_runtime/struct.GenesisConfig.html\" title=\"struct betanet_runtime::GenesisConfig\">GenesisConfig</a>","synthetic":false,"types":["betanet_runtime::GenesisConfig"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

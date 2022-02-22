@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["cumulus_pallet_allychain_system"] = [{"text":"impl&lt;T:&nbsp;<a class=\"trait\" href=\"cumulus_pallet_allychain_system/pallet/trait.Config.html\" title=\"trait cumulus_pallet_allychain_system::pallet::Config\">Config</a>&gt; SetCode&lt;T&gt; for <a class=\"struct\" href=\"cumulus_pallet_allychain_system/struct.AllychainSetCode.html\" title=\"struct cumulus_pallet_allychain_system::AllychainSetCode\">AllychainSetCode</a>&lt;T&gt;","synthetic":false,"types":["cumulus_pallet_allychain_system::AllychainSetCode"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["INHERENT_IDENTIFIER","The identifier for the allychain inherent."]],"struct":[["AllychainInherentData","The inherent data that is passed by the collator to the allychain runtime."],["MockValidationDataInherentDataProvider","Inherent data provider that supplies mocked validation data."]]});

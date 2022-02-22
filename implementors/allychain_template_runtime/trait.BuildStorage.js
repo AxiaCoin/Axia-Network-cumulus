@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["allychain_template_runtime"] = [{"text":"impl <a class=\"trait\" href=\"allychain_template_runtime/trait.BuildStorage.html\" title=\"trait allychain_template_runtime::BuildStorage\">BuildStorage</a> for <a class=\"struct\" href=\"allychain_template_runtime/struct.GenesisConfig.html\" title=\"struct allychain_template_runtime::GenesisConfig\">GenesisConfig</a>","synthetic":false,"types":["allychain_template_runtime::GenesisConfig"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["betanet_runtime"] = [{"text":"impl <a class=\"trait\" href=\"cumulus_ping/pallet/trait.Config.html\" title=\"trait cumulus_ping::pallet::Config\">Config</a> for <a class=\"struct\" href=\"betanet_runtime/struct.Runtime.html\" title=\"struct betanet_runtime::Runtime\">Runtime</a>","synthetic":false,"types":["betanet_runtime::Runtime"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

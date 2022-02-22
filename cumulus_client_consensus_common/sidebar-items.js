@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["run_allychain_consensus","Run the allychain consensus."]],"struct":[["AllychainBlockImport","Allychain specific block import."],["AllychainCandidate","The result of [`AllychainConsensus::produce_candidate`]."]],"trait":[["AllychainConsensus","A specific allychain consensus implementation that can be used by a collator to produce candidates."]]});

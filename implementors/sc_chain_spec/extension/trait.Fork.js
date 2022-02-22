@@ -1,0 +1,5 @@
+(function() {var implementors = {};
+implementors["allychain_collator"] = [{"text":"impl Fork for <a class=\"struct\" href=\"allychain_collator/chain_spec/struct.ExtensionsFork.html\" title=\"struct allychain_collator::chain_spec::ExtensionsFork\">ExtensionsFork</a>","synthetic":false,"types":["allychain_collator::chain_spec::ExtensionsFork"]}];
+implementors["axia_collator"] = [{"text":"impl Fork for <a class=\"struct\" href=\"axia_collator/chain_spec/struct.ExtensionsFork.html\" title=\"struct axia_collator::chain_spec::ExtensionsFork\">ExtensionsFork</a>","synthetic":false,"types":["axia_collator::chain_spec::ExtensionsFork"]}];
+implementors["cumulus_test_service"] = [{"text":"impl Fork for <a class=\"struct\" href=\"cumulus_test_service/struct.ExtensionsFork.html\" title=\"struct cumulus_test_service::ExtensionsFork\">ExtensionsFork</a>","synthetic":false,"types":["cumulus_test_service::chain_spec::ExtensionsFork"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
