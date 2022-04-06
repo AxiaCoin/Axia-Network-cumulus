@@ -64,7 +64,7 @@ fn create_project(out_dir: &Path) -> PathBuf {
 			[package]
 			name = "{project_name}"
 			version = "0.1.0"
-			authors = ["Axia Technologies <admin@axiacoin.network>"]
+			authors = ["Axia Technologies <admin@axia.io>"]
 			edition = "2018"
 
 			[dependencies]

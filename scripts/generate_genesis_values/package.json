@@ -6,7 +6,7 @@
   "scripts": {
     "generate": "node index.js"
   },
-  "author": "Axia Technologies <admin@axiacoin.network>",
+  "author": "Axia Technologies <admin@axia.io>",
   "license": "ISC",
   "dependencies": {
     "@axia/util-crypto": "^6.5.1"

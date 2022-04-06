@@ -22,7 +22,7 @@ use codec::{Decode, Encode};
 use sp_runtime::{traits::Block as BlockT, RuntimeDebug};
 use sp_std::prelude::*;
 
-pub use axlib_primitives::InboundDownwardMessage;
+pub use axia_core_primitives::InboundDownwardMessage;
 pub use axia_allychain::primitives::{
 	DmpMessageHandler, Id as ParaId, UpwardMessage, ValidationParams, XcmpMessageFormat,
 	XcmpMessageHandler,
@@ -33,7 +33,7 @@ pub use axia_primitives::v1::{
 
 /// A module that re-exports relevant relay chain definitions.
 pub mod relay_chain {
-	pub use axlib_primitives::*;
+	pub use axia_core_primitives::*;
 	pub use axia_primitives::{v1, v1::well_known_keys};
 }
 

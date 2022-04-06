@@ -1,55 +1,55 @@
 [package]
 name = 'statemint-runtime'
 version = '1.0.0'
-authors = ["Axia Technologies <admin@axiacoin.network>"]
+authors = ["Axia Technologies <admin@axia.io>"]
 edition = '2018'
 description = "Statemint allychain runtime"
 
 [dependencies]
-codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.0", default-features = false, features = ["derive", "max-encoded-len"] }
+codec = { package = "axia-scale-codec", version = "2.3.0", default-features = false, features = ["derive", "max-encoded-len"] }
 hex-literal = { version = '0.3.1', optional = true }
 log = { version = "0.4.14", default-features = false }
 allychain-info = { path = "../pallets/allychain-info", default-features = false }
 serde = { version = "1.0.101", optional = true, features = ["derive"] }
-scale-info = { git = "https://github.com/axia-tech/scale-info", branch = "v1.0.0", version = "1.0.0", default-features = false, features = ["derive"] }
+scale-info = { version = "1.0.0", default-features = false, features = ["derive"] }
 smallvec = "1.6.1"
 
 # Axlib dependencies
-sp-std = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-api = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-io = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-version = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-runtime = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-core = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-session = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-offchain = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-block-builder = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-transaction-pool = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-inherents = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-sp-consensus-aura = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+sp-std = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-api = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-io = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-version = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-core = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-session = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-offchain = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-block-builder = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-transaction-pool = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-inherents = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-consensus-aura = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
 
-frame-benchmarking = { git = "https://github.com/axia-tech/axlib", optional = true, default-features = false, branch = "dev" }
-frame-system-benchmarking = { git = "https://github.com/axia-tech/axlib", optional = true, default-features = false, branch = "dev" }
-frame-support = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-frame-executive = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-frame-system = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-frame-system-rpc-runtime-api = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-assets = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-aura = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-authorship = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-balances = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-multisig = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-proxy = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-randomness-collective-flip = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-session = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-sudo = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-timestamp = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-transaction-payment = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-uniques = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
-pallet-utility = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+frame-benchmarking = { git = "https://github.com/axia-tech/axia-core", optional = true, default-features = false, branch = "dev" }
+frame-system-benchmarking = { git = "https://github.com/axia-tech/axia-core", optional = true, default-features = false, branch = "dev" }
+frame-support = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+frame-executive = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+frame-system = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+frame-system-rpc-runtime-api = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-assets = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-aura = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-authorship = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-balances = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-multisig = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-proxy = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-randomness-collective-flip = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-session = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-sudo = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-timestamp = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-transaction-payment = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-uniques = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+pallet-utility = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
 
-node-primitives = { git = "https://github.com/axia-tech/axlib", default-features = false, branch = "dev" }
+node-primitives = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
 
 # Cumulus dependencies
 cumulus-pallet-aura-ext = { path = "../../pallets/aura-ext", default-features = false }
@@ -78,7 +78,7 @@ pallet-xcm = { git = "https://github.com/axia-tech/axia", default-features = fal
 hex-literal = "0.3.1"
 
 [build-dependencies]
-axlib-wasm-builder = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+axlib-wasm-builder = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
 
 [features]
 default = [ "std" ]

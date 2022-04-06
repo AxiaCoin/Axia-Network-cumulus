@@ -13,7 +13,7 @@ build = "build.rs"
 targets = ["x86_64-unknown-linux-gnu"]
 
 [build-dependencies]
-axlib-build-script-utils = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+axlib-build-script-utils = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
 
 [[bin]]
 name = "allychain-collator"
@@ -25,57 +25,57 @@ runtime-benchmarks = ["allychain-template-runtime/runtime-benchmarks"]
 [dependencies]
 derive_more = "0.99.2"
 log = "0.4.14"
-codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.1" }
+codec = { package = "axia-scale-codec", version = "2.0.0" }
 structopt = "0.3.8"
 serde = { version = "1.0.119", features = ["derive"] }
 hex-literal = "0.3.1"
 
 # RPC related Dependencies
-jsonrpc-core = { git = "https://github.com/axia-tech/jsonrpc", branch = "master", version = "18.0.0" }
+jsonrpc-core = "18.0.0"
 
 # Local Dependencies
 allychain-template-runtime = { path = "../runtime" }
 
 # Axlib Dependencies
-frame-benchmarking = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-frame-benchmarking-cli = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+frame-benchmarking = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+frame-benchmarking-cli = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
 
-pallet-transaction-payment-rpc = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+pallet-transaction-payment-rpc = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
 
-axlib-frame-rpc-system = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-axlib-prometheus-endpoint = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+axlib-frame-rpc-system = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+axlib-prometheus-endpoint = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
 
 ## Axlib Client Dependencies
-sc-basic-authorship = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-chain-spec = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-cli = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-client-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-consensus = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-executor = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-network = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-keystore = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-rpc = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-rpc-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-service = { git = "https://github.com/axia-tech/axlib", features = ["wasmtime"] , branch = "dev" }
-sc-telemetry = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-transaction-pool = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-transaction-pool-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sc-tracing = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sc-basic-authorship = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-chain-spec = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-cli = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-client-api = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-consensus = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-executor = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-network = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-keystore = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-rpc = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-rpc-api = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-service = { git = "https://github.com/axia-tech/axia-core", features = ["wasmtime"] , branch = "dev" }
+sc-telemetry = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-transaction-pool = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-transaction-pool-api = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sc-tracing = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
 
 ## Axlib Primitive Dependencies
-sp-api = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-block-builder = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-blockchain = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-consensus = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-consensus-aura = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-core = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-inherents = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-keystore = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-offchain = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-runtime = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-session = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-timestamp = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-transaction-pool = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+sp-api = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-block-builder = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-blockchain = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-consensus = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-consensus-aura = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-core = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-inherents = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-keystore = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-offchain = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-session = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-timestamp = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-transaction-pool = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
 
 # Cumulus dependencies
 cumulus-client-cli = { path = "../../client/cli" }

@@ -5,7 +5,7 @@ ARG VCS_REF
 ARG BUILD_DATE
 ARG IMAGE_NAME
 
-LABEL io.axia.image.authors="devops-team@axiacoin.network" \
+LABEL io.axia.image.authors="devops-team@axia.io" \
 	io.axia.image.vendor="Axia Technologies" \
 	io.axia.image.title="${IMAGE_NAME}" \
 	io.axia.image.description="Cumulus, the AXIA collator." \

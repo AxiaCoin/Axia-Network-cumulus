@@ -1,7 +1,7 @@
 [package]
 name = "pallet-asset-tx-payment"
 version = "0.1.0"
-authors = ["Axia Technologies <admin@axiacoin.network>"]
+authors = ["Axia Technologies <admin@axia.io>"]
 edition = "2018"
 license = "Apache-2.0"
 homepage = "https://axlib.io"
@@ -14,27 +14,27 @@ targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
 # Axlib dependencies
-frame-support = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
-frame-system = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
-pallet-transaction-payment = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
-sp-core = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
-sp-io = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
-sp-runtime = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
-sp-std = { git = "https://github.com/axia-tech/axlib", default-features = false , branch = "dev" }
+frame-support = { git = "https://github.com/axia-tech/axia-core", default-features = false , branch = "dev" }
+frame-system = { git = "https://github.com/axia-tech/axia-core", default-features = false , branch = "dev" }
+pallet-transaction-payment = { git = "https://github.com/axia-tech/axia-core", default-features = false , branch = "dev" }
+sp-core = { git = "https://github.com/axia-tech/axia-core", default-features = false , branch = "dev" }
+sp-io = { git = "https://github.com/axia-tech/axia-core", default-features = false , branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axia-core", default-features = false , branch = "dev" }
+sp-std = { git = "https://github.com/axia-tech/axia-core", default-features = false , branch = "dev" }
 
 # Other dependencies
-codec = {  git = "https://github.com/axia-tech/axia-scale-codec", package = "axia-scale-codec", branch = "v2.3.1", version = "2.3.1", default-features = false, features = ["derive"] }
-scale-info = { git = "https://github.com/axia-tech/scale-info", branch = "v1.0.0", version = "1.0.0", default-features = false, features = ["derive"] }
+codec = { package = "axia-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
+scale-info = { version = "1.0", default-features = false, features = ["derive"] }
 serde = { version = "1.0.101", optional = true }
 
 [dev-dependencies]
 smallvec = "1.4.1"
 serde_json = "1.0.41"
 
-pallet-assets = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-pallet-authorship = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-pallet-balances = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
-sp-storage = { git = "https://github.com/axia-tech/axlib", branch = "dev" }
+pallet-assets = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+pallet-authorship = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+pallet-balances = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
+sp-storage = { git = "https://github.com/axia-tech/axia-core", branch = "dev" }
 
 [features]
 default = ["std"]

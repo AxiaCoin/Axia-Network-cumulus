@@ -1,0 +1,49 @@
+[package]
+name = "cumulus-primitives-allychain-inherent"
+version = "0.1.0"
+authors = ["Axia Technologies <admin@axia.io>"]
+edition = "2018"
+
+[dependencies]
+# Axlib dependencies
+sp-inherents = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-core = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sc-client-api = { git = "https://github.com/axia-tech/axia-core", optional = true , branch = "dev" }
+sp-runtime = { git = "https://github.com/axia-tech/axia-core", optional = true , branch = "dev" }
+sp-std = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-state-machine = { git = "https://github.com/axia-tech/axia-core", optional = true , branch = "dev" }
+sp-trie = { git = "https://github.com/axia-tech/axia-core", default-features = false, branch = "dev" }
+sp-api = { git = "https://github.com/axia-tech/axia-core", optional = true , branch = "dev" }
+
+# AXIA dependencies
+axia-client = { git = "https://github.com/axia-tech/axia", optional = true, branch = "dev" }
+
+# Cumulus dependencies
+cumulus-primitives-core = { path = "../core", default-features = false }
+cumulus-test-relay-sproof-builder = { path = "../../test/relay-sproof-builder", optional = true }
+
+# Other dependencies
+async-trait = { version = "0.1.42", optional = true }
+codec = { package = "axia-scale-codec", version = "2.3.0", default-features = false, features = [ "derive" ] }
+scale-info = { version = "1.0.0", default-features = false, features = ["derive"] }
+tracing = { version = "0.1.22", optional = true }
+
+[features]
+default = [ "std" ]
+std = [
+	"async-trait",
+	"codec/std",
+	"scale-info/std",
+	"cumulus-primitives-core/std",
+	"sp-inherents/std",
+	"sp-core/std",
+	"sp-trie/std",
+	"sp-std/std",
+	"sp-state-machine",
+	"tracing",
+	"sp-runtime",
+	"sc-client-api",
+	"sp-api",
+	"axia-client",
+	"cumulus-test-relay-sproof-builder"
+]

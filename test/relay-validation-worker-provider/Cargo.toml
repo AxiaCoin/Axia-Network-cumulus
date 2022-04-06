@@ -1,7 +1,7 @@
 [package]
 name = "cumulus-test-relay-validation-worker-provider"
 version = "0.1.0"
-authors = ["Axia Technologies <admin@axiacoin.network>"]
+authors = ["Axia Technologies <admin@axia.io>"]
 edition = "2018"
 build = "build.rs"
 

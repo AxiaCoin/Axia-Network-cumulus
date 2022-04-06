@@ -95,10 +95,10 @@ dependencies = [
 name = "allychain-info"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "cumulus-primitives-core",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "serde",
 ]
@@ -111,12 +111,8 @@ dependencies = [
  "axia-allychain",
  "axia-cli",
  "axia-primitives",
- "axia-scale-codec",
  "axia-service",
  "axia-test-service",
- "axlib-build-script-utils",
- "axlib-frame-rpc-system",
- "axlib-prometheus-endpoint",
  "cumulus-client-cli",
  "cumulus-client-collator",
  "cumulus-client-consensus-aura",
@@ -132,6 +128,7 @@ dependencies = [
  "jsonrpc-core",
  "log",
  "pallet-transaction-payment-rpc",
+ "axia-scale-codec",
  "sc-basic-authorship",
  "sc-chain-spec",
  "sc-cli",
@@ -162,6 +159,9 @@ dependencies = [
  "sp-timestamp",
  "sp-transaction-pool",
  "structopt",
+ "axlib-build-script-utils",
+ "axlib-frame-rpc-system",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
@@ -171,8 +171,6 @@ dependencies = [
  "allychain-info",
  "axia-allychain",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "cumulus-pallet-allychain-system",
  "cumulus-pallet-aura-ext",
  "cumulus-pallet-dmp-queue",
@@ -200,6 +198,7 @@ dependencies = [
  "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-xcm",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "smallvec",
@@ -215,6 +214,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -226,8 +226,6 @@ version = "1.0.0"
 dependencies = [
  "axia-primitives",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "frame-executive",
  "frame-support",
  "frame-system",
@@ -236,12 +234,14 @@ dependencies = [
  "pallet-authorship",
  "pallet-balances",
  "pallet-collator-selection",
+ "axia-scale-codec",
  "scale-info",
  "sp-consensus-aura",
  "sp-core",
  "sp-io",
  "sp-runtime",
  "sp-std",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-executor",
 ]
@@ -249,14 +249,12 @@ dependencies = [
 [[package]]
 name = "alphanet-runtime"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-allychain",
  "axia-primitives",
  "axia-runtime-allychains",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "beefy-primitives",
  "bitvec",
  "frame-benchmarking",
@@ -305,6 +303,7 @@ dependencies = [
  "pallet-vesting",
  "pallet-xcm",
  "pallet-xcm-benchmarks",
+ "axia-scale-codec",
  "rustc-hex",
  "scale-info",
  "serde",
@@ -325,6 +324,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -347,9 +347,9 @@ dependencies = [
 
 [[package]]
 name = "anyhow"
-version = "1.0.55"
+version = "1.0.56"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "159bb86af3a200e19a068f4224eae4c8bb2d0fa054c7e5d1cacd5cef95e684cd"
+checksum = "4361135be9122e0870de935d7c439aef945b9f9ddd4199a553b5270b49c82a27"
 
 [[package]]
 name = "approx"
@@ -450,9 +450,9 @@ dependencies = [
 
 [[package]]
 name = "async-global-executor"
-version = "2.0.2"
+version = "2.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9586ec52317f36de58453159d48351bc244bc24ced3effc1fce22f3d48664af6"
+checksum = "c026b7e44f1316b567ee750fea85103f87fcb80792b860e979f221259796ca0a"
 dependencies = [
  "async-channel",
  "async-executor",
@@ -563,9 +563,9 @@ dependencies = [
 
 [[package]]
 name = "async-task"
-version = "4.1.0"
+version = "4.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "677d306121baf53310a3fd342d88dc0824f6bbeace68347593658525565abee8"
+checksum = "30696a84d817107fc028e049980e09d5e140e8da8f1caeb17e8e950658a3cea9"
 
 [[package]]
 name = "async-trait"
@@ -639,13 +639,13 @@ checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 [[package]]
 name = "axia-allychain"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
- "axlib-primitives",
+ "axia-core-primitives",
  "derive_more",
  "frame-support",
+ "axia-scale-codec",
+ "axia-util-mem",
  "scale-info",
  "serde",
  "sp-core",
@@ -656,7 +656,7 @@ dependencies = [
 [[package]]
 name = "axia-approval-distribution"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-network-protocol",
  "axia-node-primitives",
@@ -670,7 +670,7 @@ dependencies = [
 [[package]]
 name = "axia-availability-bitfield-distribution"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-network-protocol",
  "axia-node-subsystem",
@@ -683,7 +683,7 @@ dependencies = [
 [[package]]
 name = "axia-availability-distribution"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-erasure-coding",
  "axia-node-network-protocol",
@@ -691,10 +691,10 @@ dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-scale-codec",
  "derive_more",
  "futures 0.3.21",
- "lru 0.7.2",
+ "lru 0.7.3",
+ "axia-scale-codec",
  "rand 0.8.5",
  "sp-core",
  "sp-keystore",
@@ -705,7 +705,7 @@ dependencies = [
 [[package]]
 name = "axia-availability-recovery"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-erasure-coding",
  "axia-node-network-protocol",
@@ -713,9 +713,9 @@ dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-scale-codec",
  "futures 0.3.21",
- "lru 0.7.2",
+ "lru 0.7.3",
+ "axia-scale-codec",
  "rand 0.8.5",
  "sc-network",
  "thiserror",
@@ -725,11 +725,10 @@ dependencies = [
 [[package]]
 name = "axia-cli"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-core-pvf",
  "axia-service",
- "axlib-build-script-utils",
  "frame-benchmarking-cli",
  "futures 0.3.21",
  "log",
@@ -738,6 +737,7 @@ dependencies = [
  "sp-core",
  "sp-trie",
  "structopt",
+ "axlib-build-script-utils",
  "thiserror",
  "try-runtime-cli",
 ]
@@ -745,7 +745,7 @@ dependencies = [
 [[package]]
 name = "axia-client"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-primitives",
  "axia-runtime",
@@ -782,11 +782,7 @@ dependencies = [
  "axia-allychain",
  "axia-cli",
  "axia-primitives",
- "axia-scale-codec",
  "axia-service",
- "axlib-build-script-utils",
- "axlib-frame-rpc-system",
- "axlib-prometheus-endpoint",
  "betanet-runtime 0.1.0",
  "cumulus-client-cli",
  "cumulus-client-consensus-aura",
@@ -804,6 +800,7 @@ dependencies = [
  "log",
  "nix",
  "pallet-transaction-payment-rpc",
+ "axia-scale-codec",
  "sc-basic-authorship",
  "sc-chain-spec",
  "sc-cli",
@@ -836,6 +833,9 @@ dependencies = [
  "statemine-runtime",
  "statemint-runtime",
  "structopt",
+ "axlib-build-script-utils",
+ "axlib-frame-rpc-system",
+ "axlib-prometheus-endpoint",
  "tempfile",
  "westmint-runtime",
 ]
@@ -843,7 +843,7 @@ dependencies = [
 [[package]]
 name = "axia-collator-protocol"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "always-assert",
  "axia-node-network-protocol",
@@ -862,27 +862,22 @@ dependencies = [
 ]
 
 [[package]]
-name = "axia-db"
-version = "0.3.5"
-source = "git+https://github.com/axia-tech/axia-db#ab42b83bd1f5edcc4b9acdfa3cef859ca44890e4"
+name = "axia-core-primitives"
+version = "0.9.12"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "blake2-rfc",
- "crc32fast",
- "fs2",
- "hex",
- "libc",
- "log",
- "lz4",
- "memmap2",
- "parking_lot 0.11.2",
- "rand 0.8.5",
- "snap",
+ "axia-scale-codec",
+ "axia-util-mem",
+ "scale-info",
+ "sp-core",
+ "sp-runtime",
+ "sp-std",
 ]
 
 [[package]]
 name = "axia-dispute-distribution"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-erasure-coding",
  "axia-node-network-protocol",
@@ -890,10 +885,10 @@ dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-scale-codec",
  "derive_more",
  "futures 0.3.21",
- "lru 0.7.2",
+ "lru 0.7.3",
+ "axia-scale-codec",
  "sc-network",
  "sp-application-crypto",
  "sp-keystore",
@@ -904,7 +899,7 @@ dependencies = [
 [[package]]
 name = "axia-erasure-coding"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-primitives",
  "axia-primitives",
@@ -918,7 +913,7 @@ dependencies = [
 [[package]]
 name = "axia-gossip-support"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-network-protocol",
  "axia-node-subsystem",
@@ -938,7 +933,7 @@ dependencies = [
 [[package]]
 name = "axia-network-bridge"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "async-trait",
  "axia-node-network-protocol",
@@ -946,8 +941,8 @@ dependencies = [
  "axia-node-subsystem-util",
  "axia-overseer",
  "axia-primitives",
- "axia-scale-codec",
  "futures 0.3.21",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-network",
  "sp-consensus",
@@ -957,15 +952,15 @@ dependencies = [
 [[package]]
 name = "axia-node-collation-generation"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-erasure-coding",
  "axia-node-primitives",
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-scale-codec",
  "futures 0.3.21",
+ "axia-scale-codec",
  "sp-core",
  "sp-maybe-compressed-blob",
  "thiserror",
@@ -975,7 +970,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-allychains-inherent"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "async-trait",
  "axia-node-subsystem",
@@ -992,7 +987,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-approval-voting"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-jaeger",
  "axia-node-primitives",
@@ -1000,14 +995,14 @@ dependencies = [
  "axia-node-subsystem-util",
  "axia-overseer",
  "axia-primitives",
- "axia-scale-codec",
  "bitvec",
  "derive_more",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "kvdb",
- "lru 0.7.2",
+ "lru 0.7.3",
  "merlin",
+ "axia-scale-codec",
  "sc-keystore",
  "schnorrkel",
  "sp-application-crypto",
@@ -1020,7 +1015,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-av-store"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-erasure-coding",
  "axia-node-primitives",
@@ -1028,11 +1023,11 @@ dependencies = [
  "axia-node-subsystem-util",
  "axia-overseer",
  "axia-primitives",
- "axia-scale-codec",
  "bitvec",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "kvdb",
+ "axia-scale-codec",
  "thiserror",
  "tracing",
 ]
@@ -1040,7 +1035,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-backing"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-erasure-coding",
  "axia-node-primitives",
@@ -1058,7 +1053,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-bitfield-signing"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
@@ -1073,7 +1068,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-candidate-validation"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "async-trait",
  "axia-allychain",
@@ -1082,8 +1077,8 @@ dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-scale-codec",
  "futures 0.3.21",
+ "axia-scale-codec",
  "sp-maybe-compressed-blob",
  "tracing",
 ]
@@ -1091,7 +1086,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-chain-api"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
@@ -1106,16 +1101,16 @@ dependencies = [
 [[package]]
 name = "axia-node-core-chain-selection"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-primitives",
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-scale-codec",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "kvdb",
+ "axia-scale-codec",
  "thiserror",
  "tracing",
 ]
@@ -1123,17 +1118,17 @@ dependencies = [
 [[package]]
 name = "axia-node-core-dispute-coordinator"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-primitives",
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-scale-codec",
  "bitvec",
  "derive_more",
  "futures 0.3.21",
  "kvdb",
+ "axia-scale-codec",
  "sc-keystore",
  "thiserror",
  "tracing",
@@ -1142,7 +1137,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-dispute-participation"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-primitives",
  "axia-node-subsystem",
@@ -1155,7 +1150,7 @@ dependencies = [
 [[package]]
 name = "axia-node-core-provisioner"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
@@ -1170,19 +1165,19 @@ dependencies = [
 [[package]]
 name = "axia-node-core-pvf"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "always-assert",
  "assert_matches",
  "async-process",
  "async-std",
  "axia-allychain",
+ "axia-core-primitives",
  "axia-node-subsystem-util",
- "axia-scale-codec",
- "axlib-primitives",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "libc",
+ "axia-scale-codec",
  "pin-project 1.0.10",
  "rand 0.8.5",
  "sc-executor",
@@ -1201,14 +1196,14 @@ dependencies = [
 [[package]]
 name = "axia-node-core-runtime-api"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
  "futures 0.3.21",
  "memory-lru",
+ "axia-util-mem",
  "sp-api",
  "sp-authority-discovery",
  "sp-consensus-babe",
@@ -1219,15 +1214,15 @@ dependencies = [
 [[package]]
 name = "axia-node-jaeger"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "async-std",
  "axia-node-primitives",
  "axia-primitives",
- "axia-scale-codec",
  "lazy_static",
  "log",
  "mick-jaeger",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-network",
  "sp-core",
@@ -1237,26 +1232,26 @@ dependencies = [
 [[package]]
 name = "axia-node-metrics"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axlib-prometheus-endpoint",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "metered-channel",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
 name = "axia-node-network-protocol"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "async-trait",
  "axia-node-jaeger",
  "axia-node-primitives",
  "axia-primitives",
- "axia-scale-codec",
  "derive_more",
  "futures 0.3.21",
+ "axia-scale-codec",
  "sc-authority-discovery",
  "sc-network",
  "strum 0.22.0",
@@ -1266,13 +1261,13 @@ dependencies = [
 [[package]]
 name = "axia-node-primitives"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-allychain",
  "axia-primitives",
- "axia-scale-codec",
  "bounded-vec",
  "futures 0.3.21",
+ "axia-scale-codec",
  "schnorrkel",
  "serde",
  "sp-application-crypto",
@@ -1288,7 +1283,7 @@ dependencies = [
 [[package]]
 name = "axia-node-subsystem"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-jaeger",
  "axia-node-subsystem-types",
@@ -1298,7 +1293,7 @@ dependencies = [
 [[package]]
 name = "axia-node-subsystem-test-helpers"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "async-trait",
  "axia-node-subsystem",
@@ -1316,7 +1311,7 @@ dependencies = [
 [[package]]
 name = "axia-node-subsystem-types"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-jaeger",
  "axia-node-network-protocol",
@@ -1324,18 +1319,18 @@ dependencies = [
  "axia-overseer-gen",
  "axia-primitives",
  "axia-statement-table",
- "axlib-prometheus-endpoint",
  "derive_more",
  "futures 0.3.21",
  "sc-network",
  "smallvec",
+ "axlib-prometheus-endpoint",
  "thiserror",
 ]
 
 [[package]]
 name = "axia-node-subsystem-util"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "async-trait",
  "axia-node-jaeger",
@@ -1344,12 +1339,12 @@ dependencies = [
  "axia-node-subsystem",
  "axia-overseer",
  "axia-primitives",
- "axia-scale-codec",
  "derive_more",
  "futures 0.3.21",
  "itertools",
- "lru 0.7.2",
+ "lru 0.7.3",
  "metered-channel",
+ "axia-scale-codec",
  "pin-project 1.0.10",
  "rand 0.8.5",
  "sp-application-crypto",
@@ -1362,7 +1357,7 @@ dependencies = [
 [[package]]
 name = "axia-overseer"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-metrics",
  "axia-node-network-protocol",
@@ -1370,10 +1365,10 @@ dependencies = [
  "axia-node-subsystem-types",
  "axia-overseer-gen",
  "axia-primitives",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
  "futures 0.3.21",
  "futures-timer 3.0.2",
- "lru 0.7.2",
+ "lru 0.7.3",
+ "axia-util-mem",
  "parking_lot 0.11.2",
  "sc-client-api",
  "sp-api",
@@ -1383,7 +1378,7 @@ dependencies = [
 [[package]]
 name = "axia-overseer-gen"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "async-trait",
  "axia-node-network-protocol",
@@ -1400,9 +1395,9 @@ dependencies = [
 [[package]]
 name = "axia-overseer-gen-proc-macro"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -1411,15 +1406,15 @@ dependencies = [
 [[package]]
 name = "axia-primitives"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-allychain",
- "axia-scale-codec",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
- "axlib-primitives",
+ "axia-core-primitives",
  "bitvec",
  "frame-system",
  "hex-literal 0.3.4",
+ "axia-scale-codec",
+ "axia-util-mem",
  "scale-info",
  "serde",
  "sp-api",
@@ -1441,10 +1436,9 @@ dependencies = [
 [[package]]
 name = "axia-rpc"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-primitives",
- "axlib-frame-rpc-system",
  "beefy-gadget",
  "beefy-gadget-rpc",
  "jsonrpc-core",
@@ -1467,18 +1461,17 @@ dependencies = [
  "sp-consensus-babe",
  "sp-keystore",
  "sp-runtime",
+ "axlib-frame-rpc-system",
 ]
 
 [[package]]
 name = "axia-runtime"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-primitives",
  "axia-runtime-allychains",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "beefy-primitives",
  "bitvec",
  "frame-benchmarking",
@@ -1523,6 +1516,7 @@ dependencies = [
  "pallet-treasury",
  "pallet-utility",
  "pallet-vesting",
+ "axia-scale-codec",
  "rustc-hex",
  "scale-info",
  "serde",
@@ -1544,15 +1538,15 @@ dependencies = [
  "sp-transaction-pool",
  "sp-version",
  "static_assertions",
+ "axlib-wasm-builder",
 ]
 
 [[package]]
 name = "axia-runtime-allychains"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-primitives",
- "axia-scale-codec",
  "bitflags",
  "bitvec",
  "derive_more",
@@ -1567,6 +1561,7 @@ dependencies = [
  "pallet-staking",
  "pallet-timestamp",
  "pallet-vesting",
+ "axia-scale-codec",
  "rand 0.8.5",
  "rand_chacha 0.3.1",
  "rustc-hex",
@@ -1588,11 +1583,10 @@ dependencies = [
 [[package]]
 name = "axia-runtime-common"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-primitives",
  "axia-runtime-allychains",
- "axia-scale-codec",
  "beefy-primitives",
  "bitvec",
  "frame-benchmarking",
@@ -1614,6 +1608,7 @@ dependencies = [
  "pallet-transaction-payment",
  "pallet-treasury",
  "pallet-vesting",
+ "axia-scale-codec",
  "rustc-hex",
  "scale-info",
  "serde",
@@ -1633,33 +1628,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "axia-scale-codec"
-version = "2.3.1"
-source = "git+https://github.com/axia-tech/axia-scale-codec?branch=v2.3.1#bc2cdde93e738d57df30daac985160ca387030c2"
-dependencies = [
- "arrayvec 0.7.2",
- "axia-scale-codec-derive",
- "bitvec",
- "byte-slice-cast",
- "impl-trait-for-tuples",
- "serde",
-]
-
-[[package]]
-name = "axia-scale-codec-derive"
-version = "2.3.1"
-source = "git+https://github.com/axia-tech/axia-scale-codec?branch=v2.3.1#bc2cdde93e738d57df30daac985160ca387030c2"
-dependencies = [
- "proc-macro-crate 1.1.2",
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
 name = "axia-service"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "alphanet-runtime",
  "async-trait",
@@ -1697,7 +1668,6 @@ dependencies = [
  "axia-runtime-allychains",
  "axia-statement-distribution",
  "axiatest-runtime",
- "axlib-prometheus-endpoint",
  "beefy-gadget",
  "beefy-primitives",
  "betanet-runtime 0.9.12",
@@ -1706,7 +1676,7 @@ dependencies = [
  "hex-literal 0.3.4",
  "kvdb",
  "kvdb-rocksdb",
- "lru 0.7.2",
+ "lru 0.7.3",
  "pallet-babe",
  "pallet-im-online",
  "pallet-mmr-primitives",
@@ -1750,6 +1720,7 @@ dependencies = [
  "sp-timestamp",
  "sp-transaction-pool",
  "sp-trie",
+ "axlib-prometheus-endpoint",
  "thiserror",
  "tracing",
 ]
@@ -1757,7 +1728,7 @@ dependencies = [
 [[package]]
 name = "axia-statement-distribution"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "arrayvec 0.5.2",
  "axia-node-network-protocol",
@@ -1765,10 +1736,10 @@ dependencies = [
  "axia-node-subsystem",
  "axia-node-subsystem-util",
  "axia-primitives",
- "axia-scale-codec",
  "derive_more",
  "futures 0.3.21",
  "indexmap",
+ "axia-scale-codec",
  "sp-keystore",
  "sp-staking",
  "thiserror",
@@ -1778,7 +1749,7 @@ dependencies = [
 [[package]]
 name = "axia-statement-table"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-primitives",
  "axia-scale-codec",
@@ -1788,14 +1759,13 @@ dependencies = [
 [[package]]
 name = "axia-test-client"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-node-subsystem",
  "axia-primitives",
- "axia-scale-codec",
  "axia-test-runtime",
  "axia-test-service",
- "axlib-test-client",
+ "axia-scale-codec",
  "sc-block-builder",
  "sc-consensus",
  "sc-service",
@@ -1808,19 +1778,18 @@ dependencies = [
  "sp-runtime",
  "sp-state-machine",
  "sp-timestamp",
+ "axlib-test-client",
 ]
 
 [[package]]
 name = "axia-test-runtime"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-allychain",
  "axia-primitives",
  "axia-runtime-allychains",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "beefy-primitives",
  "bitvec",
  "frame-election-provider-support",
@@ -1847,6 +1816,7 @@ dependencies = [
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-vesting",
  "pallet-xcm",
+ "axia-scale-codec",
  "rustc-hex",
  "scale-info",
  "serde",
@@ -1866,6 +1836,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -1874,7 +1845,7 @@ dependencies = [
 [[package]]
 name = "axia-test-service"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-allychain",
  "axia-node-primitives",
@@ -1886,7 +1857,6 @@ dependencies = [
  "axia-runtime-common",
  "axia-service",
  "axia-test-runtime",
- "axlib-test-client",
  "frame-benchmarking",
  "frame-system",
  "futures 0.1.31",
@@ -1919,114 +1889,20 @@ dependencies = [
  "sp-keyring",
  "sp-runtime",
  "sp-state-machine",
+ "axlib-test-client",
  "tempfile",
  "tokio",
  "tracing",
 ]
 
 [[package]]
-name = "axia-tokio-ipc"
-version = "0.9.0"
-source = "git+https://github.com/axia-tech/axia-tokio-ipc?branch=v0.9.0#e77b33925484c30df8fb7c1cfbe45da6d7c4bf06"
-dependencies = [
- "futures 0.3.21",
- "libc",
- "log",
- "rand 0.7.3",
- "tokio",
- "winapi 0.3.9",
-]
-
-[[package]]
-name = "axia-util-mem"
-version = "0.10.2"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
-dependencies = [
- "axia-util-mem-derive 0.1.0 (git+https://github.com/axia-tech/axia-common?branch=master)",
- "cfg-if 1.0.0",
- "ethereum-types",
- "hashbrown",
- "impl-trait-for-tuples",
- "lru 0.6.6",
- "parking_lot 0.11.2",
- "primitive-types",
- "smallvec",
- "winapi 0.3.9",
-]
-
-[[package]]
-name = "axia-util-mem"
-version = "0.10.2"
-source = "git+https://github.com/axia-tech/axia-common#22e9ba1e4f54890265f7405727857a02dd4846b3"
-dependencies = [
- "axia-util-mem-derive 0.1.0 (git+https://github.com/axia-tech/axia-common)",
- "cfg-if 1.0.0",
- "hashbrown",
- "impl-trait-for-tuples",
- "parking_lot 0.11.2",
- "winapi 0.3.9",
-]
-
-[[package]]
-name = "axia-util-mem-derive"
-version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
-dependencies = [
- "proc-macro2",
- "syn",
- "synstructure",
-]
-
-[[package]]
-name = "axia-util-mem-derive"
-version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia-common#22e9ba1e4f54890265f7405727857a02dd4846b3"
-dependencies = [
- "proc-macro2",
- "syn",
- "synstructure",
-]
-
-[[package]]
-name = "axia-wasm"
-version = "0.32.0"
-source = "git+https://github.com/axia-tech/axia-wasm?branch=v0.32.0#dae3f845223dade068b31645d1a7069a2f5174f9"
-dependencies = [
- "byteorder",
-]
-
-[[package]]
-name = "axia-wasm"
-version = "0.42.2"
-source = "git+https://github.com/axia-tech/axia-wasm?branch=v0.42.2#bc11f3a80c1839cca419499a6a274c45c0be40c3"
-
-[[package]]
-name = "axia-ws"
-version = "0.11.1"
-source = "git+https://github.com/axia-tech/ws-rs?branch=v0.11.1#ffab02f4f9149116f077debc5f0ca742661f9990"
-dependencies = [
- "byteorder",
- "bytes 0.4.12",
- "httparse",
- "log",
- "mio 0.6.23",
- "mio-extras",
- "rand 0.7.3",
- "sha-1 0.8.2",
- "slab",
- "url 2.2.2",
-]
-
-[[package]]
 name = "axiatest-runtime"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-primitives",
  "axia-runtime-allychains",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "beefy-primitives",
  "bitvec",
  "frame-benchmarking",
@@ -2076,6 +1952,7 @@ dependencies = [
  "pallet-utility",
  "pallet-vesting",
  "pallet-xcm",
+ "axia-scale-codec",
  "rustc-hex",
  "scale-info",
  "serde",
@@ -2098,129 +1975,10 @@ dependencies = [
  "sp-transaction-pool",
  "sp-version",
  "static_assertions",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
-]
-
-[[package]]
-name = "axlib-build-script-utils"
-version = "3.0.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
-dependencies = [
- "platforms",
-]
-
-[[package]]
-name = "axlib-frame-rpc-system"
-version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
-dependencies = [
- "axia-scale-codec",
- "frame-system-rpc-runtime-api",
- "futures 0.3.21",
- "jsonrpc-core",
- "jsonrpc-core-client",
- "jsonrpc-derive",
- "log",
- "sc-client-api",
- "sc-rpc-api",
- "sc-transaction-pool-api",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-core",
- "sp-runtime",
-]
-
-[[package]]
-name = "axlib-primitives"
-version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
-dependencies = [
- "axia-scale-codec",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
- "scale-info",
- "sp-core",
- "sp-runtime",
- "sp-std",
-]
-
-[[package]]
-name = "axlib-prometheus-endpoint"
-version = "0.9.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
-dependencies = [
- "async-std",
- "derive_more",
- "futures-util",
- "hyper",
- "log",
- "prometheus",
- "tokio",
-]
-
-[[package]]
-name = "axlib-test-client"
-version = "2.0.1"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
-dependencies = [
- "async-trait",
- "axia-scale-codec",
- "futures 0.3.21",
- "hex",
- "sc-client-api",
- "sc-client-db",
- "sc-consensus",
- "sc-executor",
- "sc-light",
- "sc-offchain",
- "sc-service",
- "serde",
- "serde_json",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-keyring",
- "sp-keystore",
- "sp-runtime",
- "sp-state-machine",
-]
-
-[[package]]
-name = "axlib-test-utils"
-version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
-dependencies = [
- "axlib-test-utils-derive",
- "futures 0.3.21",
- "tokio",
-]
-
-[[package]]
-name = "axlib-test-utils-derive"
-version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
-dependencies = [
- "proc-macro-crate 1.1.2",
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "axlib-wasm-builder"
-version = "5.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
-dependencies = [
- "ansi_term",
- "build-helper",
- "cargo_metadata",
- "sp-maybe-compressed-blob",
- "tempfile",
- "toml",
- "walkdir",
- "wasm-gc-api",
 ]
 
 [[package]]
@@ -2244,7 +2002,7 @@ version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "33b8de67cc41132507eeece2584804efcb15f85ba516e34c944b7667f480397a"
 dependencies = [
- "heck",
+ "heck 0.3.3",
  "proc-macro-error",
  "proc-macro2",
  "quote",
@@ -2287,14 +2045,13 @@ dependencies = [
 [[package]]
 name = "beefy-gadget"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "beefy-primitives",
  "fnv",
  "futures 0.3.21",
  "log",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-client-api",
  "sc-keystore",
@@ -2308,6 +2065,7 @@ dependencies = [
  "sp-core",
  "sp-keystore",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
  "thiserror",
  "wasm-timer",
 ]
@@ -2315,9 +2073,8 @@ dependencies = [
 [[package]]
 name = "beefy-gadget-rpc"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "beefy-gadget",
  "beefy-primitives",
  "futures 0.3.21",
@@ -2326,6 +2083,7 @@ dependencies = [
  "jsonrpc-derive",
  "jsonrpc-pubsub",
  "log",
+ "axia-scale-codec",
  "sc-rpc",
  "serde",
  "sp-core",
@@ -2335,12 +2093,12 @@ dependencies = [
 [[package]]
 name = "beefy-merkle-tree"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 
 [[package]]
 name = "beefy-primitives"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "scale-info",
@@ -2358,8 +2116,6 @@ dependencies = [
  "allychain-info",
  "allychains-common",
  "axia-allychain",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "cumulus-pallet-allychain-system",
  "cumulus-pallet-aura-ext",
  "cumulus-pallet-dmp-queue",
@@ -2383,6 +2139,7 @@ dependencies = [
  "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-xcm",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-api",
@@ -2397,6 +2154,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -2405,14 +2163,12 @@ dependencies = [
 [[package]]
 name = "betanet-runtime"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-allychain",
  "axia-primitives",
  "axia-runtime-allychains",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "beefy-primitives",
  "bp-betanet",
  "bp-messages",
@@ -2453,6 +2209,7 @@ dependencies = [
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-utility",
  "pallet-xcm",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "serde_derive",
@@ -2471,6 +2228,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -2641,15 +2399,15 @@ dependencies = [
 ]
 
 [[package]]
-name = "bp-axlib"
+name = "bp-axia-core"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "bp-messages",
  "bp-runtime",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-api",
  "sp-core",
@@ -2661,13 +2419,13 @@ dependencies = [
 [[package]]
 name = "bp-betanet"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
- "bp-axlib",
+ "bp-axia-core",
  "bp-messages",
  "bp-runtime",
  "frame-support",
+ "axia-scale-codec",
  "smallvec",
  "sp-api",
  "sp-runtime",
@@ -2678,11 +2436,11 @@ dependencies = [
 [[package]]
 name = "bp-header-chain"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "finality-grandpa",
  "frame-support",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-core",
@@ -2694,11 +2452,11 @@ dependencies = [
 [[package]]
 name = "bp-message-dispatch"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "bp-runtime",
  "frame-support",
+ "axia-scale-codec",
  "scale-info",
  "sp-std",
 ]
@@ -2706,14 +2464,14 @@ dependencies = [
 [[package]]
 name = "bp-messages"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "bitvec",
  "bp-runtime",
  "frame-support",
  "frame-system",
  "impl-trait-for-tuples",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-std",
@@ -2722,7 +2480,7 @@ dependencies = [
 [[package]]
 name = "bp-rialto"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "bp-messages",
  "bp-runtime",
@@ -2737,12 +2495,12 @@ dependencies = [
 [[package]]
 name = "bp-runtime"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "hash-db",
  "num-traits",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -2755,12 +2513,12 @@ dependencies = [
 [[package]]
 name = "bp-test-utils"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "bp-header-chain",
  "ed25519-dalek",
  "finality-grandpa",
+ "axia-scale-codec",
  "sp-application-crypto",
  "sp-finality-grandpa",
  "sp-runtime",
@@ -2770,13 +2528,13 @@ dependencies = [
 [[package]]
 name = "bp-wococo"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
- "bp-axlib",
+ "bp-axia-core",
  "bp-betanet",
  "bp-messages",
  "bp-runtime",
+ "axia-scale-codec",
  "sp-api",
  "sp-runtime",
  "sp-std",
@@ -2785,9 +2543,8 @@ dependencies = [
 [[package]]
 name = "bridge-runtime-common"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "bp-message-dispatch",
  "bp-messages",
  "bp-runtime",
@@ -2797,6 +2554,7 @@ dependencies = [
  "pallet-bridge-grandpa",
  "pallet-bridge-messages",
  "pallet-transaction-payment",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-runtime",
@@ -2837,9 +2595,9 @@ checksum = "a4a45a46ab1f2412e53d3a0ade76ffad2025804294569aae387231a0cd6e0899"
 
 [[package]]
 name = "byte-slice-cast"
-version = "1.2.0"
+version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1d30c751592b77c499e7bce34d99d67c2c11bdc0574e9a488ddade14150a4698"
+checksum = "87c5fdd0166095e1d463fc6cc01aa8ce547ad77a4e84d42eb6762b084e28067e"
 
 [[package]]
 name = "byte-tools"
@@ -3342,13 +3100,13 @@ dependencies = [
  "axia-node-subsystem-test-helpers",
  "axia-overseer",
  "axia-primitives",
- "axia-scale-codec",
  "cumulus-client-consensus-common",
  "cumulus-client-network",
  "cumulus-primitives-core",
  "cumulus-test-client",
  "cumulus-test-runtime",
  "futures 0.3.21",
+ "axia-scale-codec",
  "parking_lot 0.10.2",
  "sc-client-api",
  "sp-api",
@@ -3366,11 +3124,10 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "axia-client",
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "cumulus-client-consensus-common",
  "cumulus-primitives-core",
  "futures 0.3.21",
+ "axia-scale-codec",
  "sc-client-api",
  "sc-consensus",
  "sc-consensus-aura",
@@ -3386,6 +3143,7 @@ dependencies = [
  "sp-inherents",
  "sp-keystore",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
  "tracing",
 ]
 
@@ -3395,11 +3153,11 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "axia-primitives",
- "axia-scale-codec",
  "cumulus-test-client",
  "dyn-clone",
  "futures 0.3.21",
  "futures-timer 3.0.2",
+ "axia-scale-codec",
  "sc-client-api",
  "sc-consensus",
  "sp-api",
@@ -3417,7 +3175,6 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "axia-client",
- "axlib-prometheus-endpoint",
  "cumulus-client-consensus-common",
  "cumulus-primitives-core",
  "futures 0.3.21",
@@ -3431,6 +3188,7 @@ dependencies = [
  "sp-core",
  "sp-inherents",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
  "tracing",
 ]
 
@@ -3442,14 +3200,13 @@ dependencies = [
  "axia-client",
  "axia-node-primitives",
  "axia-primitives",
- "axia-scale-codec",
  "axia-test-client",
- "axlib-test-utils",
  "cumulus-primitives-core",
  "cumulus-test-service",
  "derive_more",
  "futures 0.3.21",
  "futures-timer 3.0.2",
+ "axia-scale-codec",
  "parking_lot 0.10.2",
  "sc-cli",
  "sc-client-api",
@@ -3461,6 +3218,7 @@ dependencies = [
  "sp-keyring",
  "sp-keystore",
  "sp-runtime",
+ "axlib-test-utils",
  "tokio",
  "tracing",
 ]
@@ -3473,12 +3231,11 @@ dependencies = [
  "axia-node-subsystem",
  "axia-overseer",
  "axia-primitives",
- "axia-scale-codec",
- "axlib-test-utils",
  "cumulus-primitives-core",
  "cumulus-test-service",
  "futures 0.3.21",
  "futures-timer 3.0.2",
+ "axia-scale-codec",
  "rand 0.8.5",
  "sc-cli",
  "sc-client-api",
@@ -3488,6 +3245,7 @@ dependencies = [
  "sp-consensus",
  "sp-maybe-compressed-blob",
  "sp-runtime",
+ "axlib-test-utils",
  "tokio",
  "tracing",
 ]
@@ -3498,12 +3256,12 @@ version = "0.1.0"
 dependencies = [
  "axia-overseer",
  "axia-primitives",
- "axia-scale-codec",
  "axia-service",
  "cumulus-client-collator",
  "cumulus-client-consensus-common",
  "cumulus-client-pov-recovery",
  "cumulus-primitives-core",
+ "axia-scale-codec",
  "parking_lot 0.10.2",
  "sc-chain-spec",
  "sc-client-api",
@@ -3525,7 +3283,6 @@ name = "cumulus-pallet-allychain-system"
 version = "0.1.0"
 dependencies = [
  "axia-allychain",
- "axia-scale-codec",
  "cumulus-pallet-allychain-system-proc-macro",
  "cumulus-primitives-allychain-inherent",
  "cumulus-primitives-core",
@@ -3538,6 +3295,7 @@ dependencies = [
  "lazy_static",
  "log",
  "pallet-balances",
+ "axia-scale-codec",
  "sc-client-api",
  "scale-info",
  "serde",
@@ -3559,7 +3317,7 @@ dependencies = [
 name = "cumulus-pallet-allychain-system-proc-macro"
 version = "0.1.0"
 dependencies = [
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -3569,12 +3327,12 @@ dependencies = [
 name = "cumulus-pallet-aura-ext"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "cumulus-pallet-allychain-system",
  "frame-executive",
  "frame-support",
  "frame-system",
  "pallet-aura",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-application-crypto",
@@ -3587,11 +3345,11 @@ dependencies = [
 name = "cumulus-pallet-dmp-queue"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "cumulus-primitives-core",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -3618,10 +3376,10 @@ dependencies = [
 name = "cumulus-pallet-xcm"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "cumulus-primitives-core",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-io",
@@ -3634,13 +3392,13 @@ dependencies = [
 name = "cumulus-pallet-xcmp-queue"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "cumulus-pallet-allychain-system",
  "cumulus-primitives-core",
  "frame-support",
  "frame-system",
  "log",
  "pallet-balances",
+ "axia-scale-codec",
  "rand_chacha 0.3.1",
  "scale-info",
  "sp-core",
@@ -3656,11 +3414,11 @@ dependencies = [
 name = "cumulus-ping"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "cumulus-pallet-xcm",
  "cumulus-primitives-core",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-runtime",
@@ -3674,9 +3432,9 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "axia-client",
- "axia-scale-codec",
  "cumulus-primitives-core",
  "cumulus-test-relay-sproof-builder",
+ "axia-scale-codec",
  "sc-client-api",
  "scale-info",
  "sp-api",
@@ -3685,6 +3443,7 @@ dependencies = [
  "sp-runtime",
  "sp-state-machine",
  "sp-std",
+ "sp-storage",
  "sp-trie",
  "tracing",
 ]
@@ -3694,11 +3453,11 @@ name = "cumulus-primitives-core"
 version = "0.1.0"
 dependencies = [
  "axia-allychain",
+ "axia-core-primitives",
  "axia-primitives",
- "axia-scale-codec",
- "axlib-primitives",
  "frame-support",
  "impl-trait-for-tuples",
+ "axia-scale-codec",
  "sp-api",
  "sp-runtime",
  "sp-std",
@@ -3709,11 +3468,11 @@ dependencies = [
 name = "cumulus-primitives-timestamp"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "cumulus-primitives-core",
  "cumulus-test-client",
  "cumulus-test-relay-sproof-builder",
  "futures 0.3.21",
+ "axia-scale-codec",
  "sp-consensus",
  "sp-inherents",
  "sp-runtime",
@@ -3727,11 +3486,11 @@ name = "cumulus-primitives-utility"
 version = "0.1.0"
 dependencies = [
  "axia-allychain",
+ "axia-core-primitives",
  "axia-primitives",
- "axia-scale-codec",
- "axlib-primitives",
  "cumulus-primitives-core",
  "frame-support",
+ "axia-scale-codec",
  "sp-runtime",
  "sp-std",
  "sp-trie",
@@ -3744,8 +3503,6 @@ version = "0.1.0"
 dependencies = [
  "axia-allychain",
  "axia-primitives",
- "axia-scale-codec",
- "axlib-test-client",
  "cumulus-primitives-allychain-inherent",
  "cumulus-primitives-core",
  "cumulus-test-relay-sproof-builder",
@@ -3754,6 +3511,7 @@ dependencies = [
  "frame-system",
  "pallet-balances",
  "pallet-transaction-payment",
+ "axia-scale-codec",
  "sc-block-builder",
  "sc-consensus",
  "sc-executor",
@@ -3767,6 +3525,7 @@ dependencies = [
  "sp-keyring",
  "sp-runtime",
  "sp-timestamp",
+ "axlib-test-client",
 ]
 
 [[package]]
@@ -3774,8 +3533,8 @@ name = "cumulus-test-relay-sproof-builder"
 version = "0.1.0"
 dependencies = [
  "axia-primitives",
- "axia-scale-codec",
  "cumulus-primitives-core",
+ "axia-scale-codec",
  "sp-runtime",
  "sp-state-machine",
  "sp-std",
@@ -3792,8 +3551,6 @@ dependencies = [
 name = "cumulus-test-runtime"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
- "axlib-wasm-builder",
  "cumulus-pallet-allychain-system",
  "cumulus-primitives-core",
  "cumulus-primitives-timestamp",
@@ -3805,6 +3562,7 @@ dependencies = [
  "pallet-sudo",
  "pallet-timestamp",
  "pallet-transaction-payment",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-api",
@@ -3818,14 +3576,13 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
 ]
 
 [[package]]
 name = "cumulus-test-runtime-upgrade"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
- "axlib-wasm-builder",
  "cumulus-pallet-allychain-system",
  "cumulus-primitives-core",
  "cumulus-primitives-timestamp",
@@ -3837,6 +3594,7 @@ dependencies = [
  "pallet-sudo",
  "pallet-timestamp",
  "pallet-transaction-payment",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-api",
@@ -3850,6 +3608,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
 ]
 
 [[package]]
@@ -3858,11 +3617,8 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "axia-primitives",
- "axia-scale-codec",
  "axia-service",
  "axia-test-service",
- "axlib-test-client",
- "axlib-test-utils",
  "cumulus-client-consensus-common",
  "cumulus-client-consensus-relay-chain",
  "cumulus-client-network",
@@ -3876,6 +3632,7 @@ dependencies = [
  "futures 0.3.21",
  "jsonrpc-core",
  "pallet-transaction-payment",
+ "axia-scale-codec",
  "rand 0.7.3",
  "sc-basic-authorship",
  "sc-chain-spec",
@@ -3899,6 +3656,8 @@ dependencies = [
  "sp-timestamp",
  "sp-trie",
  "sp-version",
+ "axlib-test-client",
+ "axlib-test-utils",
  "tokio",
 ]
 
@@ -4094,9 +3853,9 @@ checksum = "ee2626afccd7561a06cf1367e2950c4718ea04565e20fb5029b6c7d8ad09abcf"
 
 [[package]]
 name = "ed25519"
-version = "1.3.0"
+version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "74e1069e39f1454367eb2de793ed062fac4c35c2934b76a81d90dd9abcd28816"
+checksum = "eed12bbf7b5312f8da1c2722bc06d8c6b12c2d86a7fb35a194c7f3e6fc2bbe39"
 dependencies = [
  "signature",
 ]
@@ -4123,11 +3882,11 @@ checksum = "e78d4f1cc4ae33bbfc157ed5d5a5ef3bc29227303d595861deb238fcec4e9457"
 
 [[package]]
 name = "enum-as-inner"
-version = "0.3.3"
+version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7c5f0096a91d210159eceb2ff5e1c4da18388a170e1e3ce948aac9c8fdbbf595"
+checksum = "570d109b813e904becc80d8d5da38376818a143348413f7149f1340fe04754d4"
 dependencies = [
- "heck",
+ "heck 0.4.0",
  "proc-macro2",
  "quote",
  "syn",
@@ -4219,26 +3978,28 @@ dependencies = [
 [[package]]
 name = "ethbloom"
 version = "0.11.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bfb684ac8fa8f6c5759f788862bb22ec6fe3cb392f6bfd08e3c64b603661e3f8"
 dependencies = [
  "crunchy",
  "fixed-hash",
  "impl-rlp",
- "impl-serde 0.3.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
+ "impl-serde",
  "tiny-keccak",
 ]
 
 [[package]]
 name = "ethereum-types"
 version = "0.12.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "05136f7057fe789f06e6d41d07b34e6f70d8c86e5693b60f97aaa6553553bdaf"
 dependencies = [
  "ethbloom",
  "fixed-hash",
  "impl-rlp",
- "impl-serde 0.3.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
+ "impl-serde",
  "primitive-types",
- "uint 0.9.1",
+ "uint",
 ]
 
 [[package]]
@@ -4299,14 +4060,15 @@ dependencies = [
 [[package]]
 name = "finality-grandpa"
 version = "0.14.4"
-source = "git+https://github.com/axia-tech/finality-grandpa?branch=v0.14.4#595370dd032b0050d231a23ad9fab90ab7db36fa"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e8ac3ff5224ef91f3c97e03eb1de2db82743427e91aaa5ac635f454f0b164f5a"
 dependencies = [
- "axia-scale-codec",
  "either",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "log",
  "num-traits",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "scale-info",
 ]
@@ -4314,7 +4076,8 @@ dependencies = [
 [[package]]
 name = "fixed-hash"
 version = "0.7.0"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cfcf0ed7fe52a17a03854ec54a9f76d6d84508d1c0e66bc1793301c73fc8493c"
 dependencies = [
  "byteorder",
  "rand 0.8.5",
@@ -4350,7 +4113,7 @@ checksum = "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1"
 [[package]]
 name = "fork-tree"
 version = "3.0.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
 ]
@@ -4368,13 +4131,13 @@ dependencies = [
 [[package]]
 name = "frame-benchmarking"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "linregress",
  "log",
+ "axia-scale-codec",
  "paste",
  "scale-info",
  "sp-api",
@@ -4388,16 +4151,16 @@ dependencies = [
 [[package]]
 name = "frame-benchmarking-cli"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "Inflector",
- "axia-scale-codec",
  "chrono",
  "frame-benchmarking",
  "frame-support",
  "handlebars",
  "linked-hash-map",
  "log",
+ "axia-scale-codec",
  "sc-cli",
  "sc-client-db",
  "sc-executor",
@@ -4414,11 +4177,11 @@ dependencies = [
 [[package]]
 name = "frame-election-provider-support"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-arithmetic",
  "sp-npos-elections",
@@ -4428,11 +4191,11 @@ dependencies = [
 [[package]]
 name = "frame-executive"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -4444,10 +4207,11 @@ dependencies = [
 [[package]]
 name = "frame-metadata"
 version = "14.2.0"
-source = "git+https://github.com/axia-tech/frame-metadata?branch=v14.2.0#e93b5978a7e9625bf6c9baa645b8c53715a1579e"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "37ed5e5c346de62ca5c184b4325a6600d1eaca210666e4606fe4e449574978d0"
 dependencies = [
- "axia-scale-codec",
  "cfg-if 1.0.0",
+ "axia-scale-codec",
  "scale-info",
  "serde",
 ]
@@ -4455,15 +4219,15 @@ dependencies = [
 [[package]]
 name = "frame-support"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "bitflags",
  "frame-metadata",
  "frame-support-procedural",
  "impl-trait-for-tuples",
  "log",
  "once_cell",
+ "axia-scale-codec",
  "paste",
  "scale-info",
  "serde",
@@ -4482,7 +4246,7 @@ dependencies = [
 [[package]]
 name = "frame-support-procedural"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "Inflector",
  "frame-support-procedural-tools",
@@ -4494,10 +4258,10 @@ dependencies = [
 [[package]]
 name = "frame-support-procedural-tools"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "frame-support-procedural-tools-derive",
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -4506,7 +4270,7 @@ dependencies = [
 [[package]]
 name = "frame-support-procedural-tools-derive"
 version = "3.0.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -4516,11 +4280,11 @@ dependencies = [
 [[package]]
 name = "frame-system"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-core",
@@ -4533,12 +4297,12 @@ dependencies = [
 [[package]]
 name = "frame-system-benchmarking"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-runtime",
@@ -4548,7 +4312,7 @@ dependencies = [
 [[package]]
 name = "frame-system-rpc-runtime-api"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "sp-api",
@@ -4557,7 +4321,7 @@ dependencies = [
 [[package]]
 name = "frame-try-runtime"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "frame-support",
  "sp-api",
@@ -4868,7 +4632,8 @@ dependencies = [
 [[package]]
 name = "hash-db"
 version = "0.15.2"
-source = "git+https://github.com/axia-tech/trie?branch=master#ee16fe53f6bfc3cfba00fa80fcea6998244c7eb2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d23bd4e7b5eda0d0f3a307e8b381fdc8ba9000f26fbe912250c0a4cc3956364a"
 
 [[package]]
 name = "hash256-std-hasher"
@@ -4896,6 +4661,12 @@ checksum = "6d621efb26863f0e9924c6ac577e8275e5e6b77455db64ffa6c65c904e9e132c"
 dependencies = [
  "unicode-segmentation",
 ]
+
+[[package]]
+name = "heck"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2540771e65fc8cb83cd6e8a237f70c319bd5c29f78ed1084ba5d50eeac86f7f9"
 
 [[package]]
 name = "hermit-abi"
@@ -5127,7 +4898,8 @@ dependencies = [
 [[package]]
 name = "impl-codec"
 version = "0.5.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "161ebdfec3c8e3b52bf61c4f3550a1eea4f9579d10dc1b936f3171ebdcd6c443"
 dependencies = [
  "axia-scale-codec",
 ]
@@ -5135,7 +4907,8 @@ dependencies = [
 [[package]]
 name = "impl-rlp"
 version = "0.3.0"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f28220f89297a075ddc7245cd538076ee98b01f2a9c23a53a4f1105d5a322808"
 dependencies = [
  "rlp",
 ]
@@ -5145,14 +4918,6 @@ name = "impl-serde"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4551f042f3438e64dbd6226b20527fc84a6e1fe65688b58746a2f53623f25f5c"
-dependencies = [
- "serde",
-]
-
-[[package]]
-name = "impl-serde"
-version = "0.3.2"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
 dependencies = [
  "serde",
 ]
@@ -5190,9 +4955,9 @@ dependencies = [
 
 [[package]]
 name = "integer-encoding"
-version = "3.0.2"
+version = "3.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "90c11140ffea82edce8dcd74137ce9324ec24b3cf0175fc9d7e29164da9915b8"
+checksum = "0e85a1509a128c855368e135cffcde7eac17d8e1083f41e2b98c58bc1a5074be"
 
 [[package]]
 name = "integer-sqrt"
@@ -5242,9 +5007,9 @@ dependencies = [
 
 [[package]]
 name = "ipnet"
-version = "2.3.1"
+version = "2.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "68f2d64f2edebec4ce84ad108148e67e1064789bee435edc5b60ad398714a3a9"
+checksum = "35e70ee094dc02fd9c13fdad4940090f22dbd6ac7c9e7094a46cf0232a50bc7c"
 
 [[package]]
 name = "itertools"
@@ -5282,7 +5047,8 @@ dependencies = [
 [[package]]
 name = "jsonrpc-client-transports"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d2b99d4207e2a04fb4581746903c2bb7eb376f88de9c699d0f3e10feeac0cd3a"
 dependencies = [
  "derive_more",
  "futures 0.3.21",
@@ -5297,7 +5063,8 @@ dependencies = [
 [[package]]
 name = "jsonrpc-core"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "14f7f76aef2d054868398427f6c54943cf3d1caa9a7ec7d0c38d69df97a965eb"
 dependencies = [
  "futures 0.3.21",
  "futures-executor",
@@ -5311,7 +5078,8 @@ dependencies = [
 [[package]]
 name = "jsonrpc-core-client"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b51da17abecbdab3e3d4f26b01c5ec075e88d3abe3ab3b05dc9aa69392764ec0"
 dependencies = [
  "futures 0.3.21",
  "jsonrpc-client-transports",
@@ -5320,7 +5088,8 @@ dependencies = [
 [[package]]
 name = "jsonrpc-derive"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5b939a78fa820cdfcb7ee7484466746a7377760970f6f9c6fe19f9edcc8a38d2"
 dependencies = [
  "proc-macro-crate 0.1.5",
  "proc-macro2",
@@ -5331,7 +5100,8 @@ dependencies = [
 [[package]]
 name = "jsonrpc-http-server"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e1dea6e07251d9ce6a552abfb5d7ad6bc290a4596c8dcc3d795fae2bbdc1f3ff"
 dependencies = [
  "futures 0.3.21",
  "hyper",
@@ -5346,13 +5116,14 @@ dependencies = [
 [[package]]
 name = "jsonrpc-ipc-server"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "382bb0206323ca7cda3dcd7e245cea86d37d02457a02a975e3378fb149a48845"
 dependencies = [
- "axia-tokio-ipc",
  "futures 0.3.21",
  "jsonrpc-core",
  "jsonrpc-server-utils",
  "log",
+ "axia-tokio-ipc",
  "parking_lot 0.11.2",
  "tower-service",
 ]
@@ -5360,7 +5131,8 @@ dependencies = [
 [[package]]
 name = "jsonrpc-pubsub"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "240f87695e6c6f62fb37f05c02c04953cf68d6408b8c1c89de85c7a0125b1011"
 dependencies = [
  "futures 0.3.21",
  "jsonrpc-core",
@@ -5374,7 +5146,8 @@ dependencies = [
 [[package]]
 name = "jsonrpc-server-utils"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fa4fdea130485b572c39a460d50888beb00afb3e35de23ccd7fad8ff19f0e0d4"
 dependencies = [
  "bytes 1.1.0",
  "futures 0.3.21",
@@ -5391,13 +5164,14 @@ dependencies = [
 [[package]]
 name = "jsonrpc-ws-server"
 version = "18.0.0"
-source = "git+https://github.com/axia-tech/jsonrpc?branch=master#d80a0eb2dcd92d285cb4f9c36839a824f07a6587"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f892c7d766369475ab7b0669f417906302d7c0fb521285c0a0c92e52e7c8e946"
 dependencies = [
- "axia-ws",
  "futures 0.3.21",
  "jsonrpc-core",
  "jsonrpc-server-utils",
  "log",
+ "axia-ws",
  "parking_lot 0.11.2",
  "slab",
 ]
@@ -5410,7 +5184,7 @@ checksum = "8edb341d35279b59c79d7fe9e060a51aec29d45af99cc7c72ea7caa350fa71a4"
 dependencies = [
  "Inflector",
  "bae",
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -5486,33 +5260,36 @@ dependencies = [
 [[package]]
 name = "kvdb"
 version = "0.10.0"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "45a3f58dc069ec0e205a27f5b45920722a46faed802a0541538241af6228f512"
 dependencies = [
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
+ "axia-util-mem",
  "smallvec",
 ]
 
 [[package]]
 name = "kvdb-memorydb"
 version = "0.10.0"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c3b6b85fc643f5acd0bffb2cc8a6d150209379267af0d41db72170021841f9f5"
 dependencies = [
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
  "kvdb",
+ "axia-util-mem",
  "parking_lot 0.11.2",
 ]
 
 [[package]]
 name = "kvdb-rocksdb"
 version = "0.14.0"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9b1b6ea8f2536f504b645ad78419c8246550e19d2c3419a167080ce08edee35a"
 dependencies = [
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
  "fs-swap",
  "kvdb",
  "log",
  "num_cpus",
  "owning_ref",
+ "axia-util-mem",
  "parking_lot 0.11.2",
  "regex",
  "rocksdb",
@@ -5741,7 +5518,7 @@ dependencies = [
  "rand 0.7.3",
  "sha2 0.9.9",
  "smallvec",
- "uint 0.9.3",
+ "uint",
  "unsigned-varint 0.7.1",
  "void",
  "wasm-timer",
@@ -6126,9 +5903,9 @@ dependencies = [
 
 [[package]]
 name = "libz-sys"
-version = "1.1.3"
+version = "1.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de5435b8549c16d423ed0c03dbaafe57cf6c3344744f1242520d59c9d8ecec66"
+checksum = "6f35facd4a5673cb5a48822be2be1d4236c1c99cb4113cab7061ac720d5bf859"
 dependencies = [
  "cc",
  "pkg-config",
@@ -6199,9 +5976,9 @@ dependencies = [
 
 [[package]]
 name = "lru"
-version = "0.7.2"
+version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "274353858935c992b13c0ca408752e2121da852d07dec7ce5f108c77dfa14d1f"
+checksum = "fcb87f3080f6d1d69e8c564c0fcfde1d7aa8cc451ce40cae89479111f03bc0eb"
 dependencies = [
  "hashbrown",
 ]
@@ -6217,9 +5994,9 @@ dependencies = [
 
 [[package]]
 name = "lz4"
-version = "1.23.2"
+version = "1.23.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aac20ed6991e01bf6a2e68cc73df2b389707403662a8ba89f68511fb340f724c"
+checksum = "4edcb94251b1c375c459e5abe9fb0168c1c826c3370172684844f8f3f8d1a885"
 dependencies = [
  "libc",
  "lz4-sys",
@@ -6227,9 +6004,9 @@ dependencies = [
 
 [[package]]
 name = "lz4-sys"
-version = "1.9.2"
+version = "1.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dca79aa95d8b3226213ad454d328369853be3a1382d89532a854f4d69640acae"
+checksum = "d7be8908e2ed6f31c02db8a9fa962f03e36c53fbfde437363eae3306b85d7e17"
 dependencies = [
  "cc",
  "libc",
@@ -6307,11 +6084,12 @@ dependencies = [
 [[package]]
 name = "memory-db"
 version = "0.27.0"
-source = "git+https://github.com/axia-tech/trie?branch=master#ee16fe53f6bfc3cfba00fa80fcea6998244c7eb2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "de006e09d04fc301a5f7e817b75aa49801c4479a8af753764416b085337ddcc5"
 dependencies = [
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common)",
  "hash-db",
  "hashbrown",
+ "axia-util-mem",
 ]
 
 [[package]]
@@ -6344,7 +6122,7 @@ dependencies = [
 [[package]]
 name = "metered-channel"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "derive_more",
  "futures 0.3.21",
@@ -6355,9 +6133,9 @@ dependencies = [
 
 [[package]]
 name = "mick-jaeger"
-version = "0.1.7"
+version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fd2c2cc134e57461f0898b0e921f0a7819b5e3f3a4335b9aa390ce81a5f36fb9"
+checksum = "69672161530e8aeca1d1400fbf3f1a1747ff60ea604265a4e906c2442df20532"
 dependencies = [
  "futures 0.3.21",
  "rand 0.8.5",
@@ -6536,7 +6314,7 @@ version = "0.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "424f6e86263cd5294cbd7f1e95746b95aca0e0d66bff31e5a40d6baa87b4aa99"
 dependencies = [
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro-error",
  "proc-macro2",
  "quote",
@@ -6629,10 +6407,10 @@ dependencies = [
 [[package]]
 name = "node-primitives"
 version = "2.0.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-application-crypto",
  "sp-core",
@@ -6766,9 +6544,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.9.0"
+version = "1.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "da32515d9f6e6e489d7bc9d84c71b060db7247dc035bbe44eac88cf87486d8d5"
+checksum = "87f3e037eac156d1775da914196f0f37741a274155e34a0b7e427c35d2a2ecb9"
 
 [[package]]
 name = "opaque-debug"
@@ -6810,13 +6588,13 @@ dependencies = [
 name = "pallet-asset-tx-payment"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "pallet-assets",
  "pallet-authorship",
  "pallet-balances",
  "pallet-transaction-payment",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "serde_json",
@@ -6831,12 +6609,12 @@ dependencies = [
 [[package]]
 name = "pallet-assets"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-runtime",
  "sp-std",
@@ -6845,12 +6623,12 @@ dependencies = [
 [[package]]
 name = "pallet-aura"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "pallet-timestamp",
+ "axia-scale-codec",
  "scale-info",
  "sp-application-crypto",
  "sp-consensus-aura",
@@ -6861,12 +6639,12 @@ dependencies = [
 [[package]]
 name = "pallet-authority-discovery"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "pallet-session",
+ "axia-scale-codec",
  "scale-info",
  "sp-application-crypto",
  "sp-authority-discovery",
@@ -6877,12 +6655,12 @@ dependencies = [
 [[package]]
 name = "pallet-authorship"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "impl-trait-for-tuples",
+ "axia-scale-codec",
  "scale-info",
  "sp-authorship",
  "sp-runtime",
@@ -6892,9 +6670,8 @@ dependencies = [
 [[package]]
 name = "pallet-babe"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -6902,6 +6679,7 @@ dependencies = [
  "pallet-authorship",
  "pallet-session",
  "pallet-timestamp",
+ "axia-scale-codec",
  "scale-info",
  "sp-application-crypto",
  "sp-consensus-babe",
@@ -6916,15 +6694,15 @@ dependencies = [
 [[package]]
 name = "pallet-bags-list"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-election-provider-support",
  "frame-support",
  "frame-system",
  "log",
  "pallet-balances",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -6936,13 +6714,13 @@ dependencies = [
 [[package]]
 name = "pallet-balances"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-runtime",
  "sp-std",
@@ -6951,13 +6729,13 @@ dependencies = [
 [[package]]
 name = "pallet-beefy"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "beefy-primitives",
  "frame-support",
  "frame-system",
  "pallet-session",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-runtime",
@@ -6967,9 +6745,8 @@ dependencies = [
 [[package]]
 name = "pallet-beefy-mmr"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "beefy-merkle-tree",
  "beefy-primitives",
  "frame-support",
@@ -6981,6 +6758,7 @@ dependencies = [
  "pallet-mmr",
  "pallet-mmr-primitives",
  "pallet-session",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-core",
@@ -6992,14 +6770,14 @@ dependencies = [
 [[package]]
 name = "pallet-bounties"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
  "pallet-treasury",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -7010,14 +6788,14 @@ dependencies = [
 [[package]]
 name = "pallet-bridge-dispatch"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "bp-message-dispatch",
  "bp-runtime",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-runtime",
@@ -7027,9 +6805,8 @@ dependencies = [
 [[package]]
 name = "pallet-bridge-grandpa"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "bp-header-chain",
  "bp-runtime",
  "bp-test-utils",
@@ -7038,6 +6815,7 @@ dependencies = [
  "frame-system",
  "log",
  "num-traits",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-finality-grandpa",
@@ -7049,9 +6827,8 @@ dependencies = [
 [[package]]
 name = "pallet-bridge-messages"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "bitvec",
  "bp-message-dispatch",
  "bp-messages",
@@ -7061,6 +6838,7 @@ dependencies = [
  "frame-system",
  "log",
  "num-traits",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-core",
@@ -7072,7 +6850,6 @@ dependencies = [
 name = "pallet-collator-selection"
 version = "3.0.0"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -7082,6 +6859,7 @@ dependencies = [
  "pallet-balances",
  "pallet-session",
  "pallet-timestamp",
+ "axia-scale-codec",
  "rand 0.7.3",
  "scale-info",
  "serde",
@@ -7097,13 +6875,13 @@ dependencies = [
 [[package]]
 name = "pallet-collective"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -7114,12 +6892,12 @@ dependencies = [
 [[package]]
 name = "pallet-democracy"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-io",
@@ -7130,14 +6908,14 @@ dependencies = [
 [[package]]
 name = "pallet-election-provider-multi-phase"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-election-provider-support",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "rand 0.7.3",
  "scale-info",
  "sp-arithmetic",
@@ -7154,13 +6932,13 @@ dependencies = [
 [[package]]
 name = "pallet-elections-phragmen"
 version = "5.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -7172,12 +6950,12 @@ dependencies = [
 [[package]]
 name = "pallet-gilt"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-arithmetic",
  "sp-runtime",
@@ -7187,15 +6965,15 @@ dependencies = [
 [[package]]
 name = "pallet-grandpa"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
  "pallet-authorship",
  "pallet-session",
+ "axia-scale-codec",
  "scale-info",
  "sp-application-crypto",
  "sp-core",
@@ -7210,13 +6988,13 @@ dependencies = [
 [[package]]
 name = "pallet-identity"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "enumflags2",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-io",
  "sp-runtime",
@@ -7226,14 +7004,14 @@ dependencies = [
 [[package]]
 name = "pallet-im-online"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
  "pallet-authorship",
+ "axia-scale-codec",
  "scale-info",
  "sp-application-crypto",
  "sp-core",
@@ -7246,12 +7024,12 @@ dependencies = [
 [[package]]
 name = "pallet-indices"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -7263,13 +7041,13 @@ dependencies = [
 [[package]]
 name = "pallet-membership"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -7280,14 +7058,14 @@ dependencies = [
 [[package]]
 name = "pallet-mmr"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "ckb-merkle-mountain-range",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "pallet-mmr-primitives",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -7298,12 +7076,12 @@ dependencies = [
 [[package]]
 name = "pallet-mmr-primitives"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "serde",
  "sp-api",
  "sp-core",
@@ -7314,13 +7092,13 @@ dependencies = [
 [[package]]
 name = "pallet-mmr-rpc"
 version = "3.0.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
  "pallet-mmr-primitives",
+ "axia-scale-codec",
  "serde",
  "sp-api",
  "sp-blockchain",
@@ -7331,12 +7109,12 @@ dependencies = [
 [[package]]
 name = "pallet-multisig"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-io",
  "sp-runtime",
@@ -7346,11 +7124,11 @@ dependencies = [
 [[package]]
 name = "pallet-nicks"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-io",
  "sp-runtime",
@@ -7360,13 +7138,13 @@ dependencies = [
 [[package]]
 name = "pallet-offences"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "log",
  "pallet-balances",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-runtime",
@@ -7377,9 +7155,8 @@ dependencies = [
 [[package]]
 name = "pallet-offences-benchmarking"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-election-provider-support",
  "frame-support",
@@ -7391,6 +7168,7 @@ dependencies = [
  "pallet-offences",
  "pallet-session",
  "pallet-staking",
+ "axia-scale-codec",
  "scale-info",
  "sp-runtime",
  "sp-staking",
@@ -7400,12 +7178,12 @@ dependencies = [
 [[package]]
 name = "pallet-proxy"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-io",
  "sp-runtime",
@@ -7415,11 +7193,11 @@ dependencies = [
 [[package]]
 name = "pallet-randomness-collective-flip"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "safe-mix",
  "scale-info",
  "sp-runtime",
@@ -7429,11 +7207,11 @@ dependencies = [
 [[package]]
 name = "pallet-recovery"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-io",
  "sp-runtime",
@@ -7443,13 +7221,13 @@ dependencies = [
 [[package]]
 name = "pallet-scheduler"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-io",
  "sp-runtime",
@@ -7459,14 +7237,14 @@ dependencies = [
 [[package]]
 name = "pallet-session"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "impl-trait-for-tuples",
  "log",
  "pallet-timestamp",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -7480,7 +7258,7 @@ dependencies = [
 [[package]]
 name = "pallet-session-benchmarking"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
@@ -7496,11 +7274,11 @@ dependencies = [
 [[package]]
 name = "pallet-society"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "rand_chacha 0.2.2",
  "scale-info",
  "sp-runtime",
@@ -7510,9 +7288,8 @@ dependencies = [
 [[package]]
 name = "pallet-staking"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-election-provider-support",
  "frame-support",
@@ -7520,6 +7297,7 @@ dependencies = [
  "log",
  "pallet-authorship",
  "pallet-session",
+ "axia-scale-codec",
  "rand_chacha 0.2.2",
  "scale-info",
  "serde",
@@ -7533,9 +7311,9 @@ dependencies = [
 [[package]]
 name = "pallet-staking-reward-curve"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -7544,7 +7322,7 @@ dependencies = [
 [[package]]
 name = "pallet-staking-reward-fn"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "log",
  "sp-arithmetic",
@@ -7553,11 +7331,11 @@ dependencies = [
 [[package]]
 name = "pallet-sudo"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-io",
  "sp-runtime",
@@ -7568,10 +7346,10 @@ dependencies = [
 name = "pallet-template"
 version = "0.1.0"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-core",
@@ -7582,13 +7360,13 @@ dependencies = [
 [[package]]
 name = "pallet-timestamp"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-inherents",
  "sp-io",
@@ -7600,14 +7378,14 @@ dependencies = [
 [[package]]
 name = "pallet-tips"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
  "pallet-treasury",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-core",
@@ -7619,11 +7397,11 @@ dependencies = [
 [[package]]
 name = "pallet-transaction-payment"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "smallvec",
@@ -7636,13 +7414,13 @@ dependencies = [
 [[package]]
 name = "pallet-transaction-payment-rpc"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
  "pallet-transaction-payment-rpc-runtime-api",
+ "axia-scale-codec",
  "sp-api",
  "sp-blockchain",
  "sp-core",
@@ -7653,10 +7431,10 @@ dependencies = [
 [[package]]
 name = "pallet-transaction-payment-rpc-runtime-api"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "pallet-transaction-payment",
+ "axia-scale-codec",
  "sp-api",
  "sp-runtime",
 ]
@@ -7664,14 +7442,14 @@ dependencies = [
 [[package]]
 name = "pallet-treasury"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "impl-trait-for-tuples",
  "pallet-balances",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-runtime",
@@ -7681,12 +7459,12 @@ dependencies = [
 [[package]]
 name = "pallet-uniques"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-runtime",
  "sp-std",
@@ -7695,12 +7473,12 @@ dependencies = [
 [[package]]
 name = "pallet-utility"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-io",
@@ -7711,13 +7489,13 @@ dependencies = [
 [[package]]
 name = "pallet-vesting"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-runtime",
  "sp-std",
@@ -7726,12 +7504,12 @@ dependencies = [
 [[package]]
 name = "pallet-xcm"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-core",
@@ -7744,13 +7522,13 @@ dependencies = [
 [[package]]
 name = "pallet-xcm-benchmarks"
 version = "0.9.8"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-runtime",
  "sp-std",
@@ -7759,10 +7537,131 @@ dependencies = [
 ]
 
 [[package]]
+name = "axia-db"
+version = "0.3.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "865edee5b792f537356d9e55cbc138e7f4718dc881a7ea45a18b37bf61c21e3d"
+dependencies = [
+ "blake2-rfc",
+ "crc32fast",
+ "fs2",
+ "hex",
+ "libc",
+ "log",
+ "lz4",
+ "memmap2",
+ "parking_lot 0.11.2",
+ "rand 0.8.5",
+ "snap",
+]
+
+[[package]]
+name = "axia-scale-codec"
+version = "2.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "373b1a4c1338d9cd3d1fa53b3a11bdab5ab6bd80a20f7f7becd76953ae2be909"
+dependencies = [
+ "arrayvec 0.7.2",
+ "bitvec",
+ "byte-slice-cast",
+ "impl-trait-for-tuples",
+ "axia-scale-codec-derive",
+ "serde",
+]
+
+[[package]]
+name = "axia-scale-codec-derive"
+version = "2.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1557010476e0595c9b568d16dcfb81b93cdeb157612726f5170d31aa707bed27"
+dependencies = [
+ "proc-macro-crate 1.1.3",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "axia-send-wrapper"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "aa9777aa91b8ad9dd5aaa04a9b6bcb02c7f1deb952fca5a66034d5e63afc5c6f"
+
+[[package]]
+name = "axia-tokio-ipc"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9981e32fb75e004cc148f5fb70342f393830e0a4aa62e3cc93b50976218d42b6"
+dependencies = [
+ "futures 0.3.21",
+ "libc",
+ "log",
+ "rand 0.7.3",
+ "tokio",
+ "winapi 0.3.9",
+]
+
+[[package]]
+name = "axia-util-mem"
+version = "0.10.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6f4cb4e169446179cbc6b8b6320cc9fca49bd2e94e8db25f25f200a8ea774770"
+dependencies = [
+ "cfg-if 1.0.0",
+ "ethereum-types",
+ "hashbrown",
+ "impl-trait-for-tuples",
+ "lru 0.6.6",
+ "axia-util-mem-derive",
+ "parking_lot 0.11.2",
+ "primitive-types",
+ "smallvec",
+ "winapi 0.3.9",
+]
+
+[[package]]
+name = "axia-util-mem-derive"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f557c32c6d268a07c921471619c0295f5efad3a0e76d4f97a05c091a51d110b2"
+dependencies = [
+ "proc-macro2",
+ "syn",
+ "synstructure",
+]
+
+[[package]]
+name = "axia-wasm"
+version = "0.32.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "16ad52817c4d343339b3bc2e26861bd21478eda0b7509acf83505727000512ac"
+dependencies = [
+ "byteorder",
+]
+
+[[package]]
+name = "axia-wasm"
+version = "0.42.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "be5e13c266502aadf83426d87d81a0f5d1ef45b8027f5a471c360abfe4bfae92"
+
+[[package]]
+name = "axia-ws"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5983d3929ad50f12c3eb9a6743f19d691866ecd44da74c0a3308c3f8a56df0c6"
+dependencies = [
+ "byteorder",
+ "bytes 0.4.12",
+ "httparse",
+ "log",
+ "mio 0.6.23",
+ "mio-extras",
+ "rand 0.7.3",
+ "sha-1 0.8.2",
+ "slab",
+ "url 2.2.2",
+]
 
 [[package]]
 name = "parking"
@@ -7814,7 +7713,7 @@ dependencies = [
  "cfg-if 1.0.0",
  "instant",
  "libc",
- "redox_syscall 0.2.10",
+ "redox_syscall 0.2.11",
  "smallvec",
  "winapi 0.3.9",
 ]
@@ -8055,14 +7954,15 @@ dependencies = [
 [[package]]
 name = "primitive-types"
 version = "0.10.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "05e4722c697a58a99d5d06a08c30821d7c082a4632198de1eaa5a6c22ef42373"
 dependencies = [
  "fixed-hash",
  "impl-codec",
  "impl-rlp",
- "impl-serde 0.3.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
+ "impl-serde",
  "scale-info",
- "uint 0.9.1",
+ "uint",
 ]
 
 [[package]]
@@ -8076,9 +7976,9 @@ dependencies = [
 
 [[package]]
 name = "proc-macro-crate"
-version = "1.1.2"
+version = "1.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9dada8c9981fcf32929c3c0f0cd796a9284aca335565227ed88c83babb1d43dc"
+checksum = "e17d47ce914bf4de440332250b0edd23ce48c005f59fab39d3335866b114f11a"
 dependencies = [
  "thiserror",
  "toml",
@@ -8154,7 +8054,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "355f634b43cdd80724ee7848f95770e7e70eefa6dcf14fea676216573b8fd603"
 dependencies = [
  "bytes 1.1.0",
- "heck",
+ "heck 0.3.3",
  "itertools",
  "log",
  "multimap",
@@ -8199,12 +8099,13 @@ dependencies = [
 
 [[package]]
 name = "pwasm-utils"
-version = "0.19.0"
-source = "git+https://github.com/axia-tech/wasm-utils?branch=v0.19.0#529262673bd7c39e63a7b7a163bf2c1a1eac7877"
+version = "0.18.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "880b3384fb00b8f6ecccd5d358b93bd2201900ae3daad213791d1864f6441f5c"
 dependencies = [
- "axia-wasm 0.42.2",
  "byteorder",
  "log",
+ "axia-wasm 0.42.2",
 ]
 
 [[package]]
@@ -8375,9 +8276,9 @@ checksum = "41cc0f7e4d5d4544e8861606a285bb08d3e70712ccc7d2b84d7c0ccfaf4b05ce"
 
 [[package]]
 name = "redox_syscall"
-version = "0.2.10"
+version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8383f39639269cde97d255a32bdb68c047337295414940c68bdd30c2e13203ff"
+checksum = "8380fe0152551244f0747b1bf41737e0f8a74f97a14ccefd1148187271634f3c"
 dependencies = [
  "bitflags",
 ]
@@ -8389,7 +8290,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "528532f3d801c87aec9def2add9ca802fe569e44a544afe633765267840abe64"
 dependencies = [
  "getrandom 0.2.5",
- "redox_syscall 0.2.10",
+ "redox_syscall 0.2.11",
 ]
 
 [[package]]
@@ -8438,9 +8339,9 @@ dependencies = [
 
 [[package]]
 name = "regex"
-version = "1.5.4"
+version = "1.5.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d07a8629359eb56f1e2fb1652bb04212c072a87ba68546a04065d525673ac461"
+checksum = "1a11647b6b25ff05a515cb92c365cec08801e83423a235b51e231e1808747286"
 dependencies = [
  "aho-corasick",
  "memchr",
@@ -8477,13 +8378,13 @@ dependencies = [
 [[package]]
 name = "remote-externalities"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "env_logger",
  "jsonrpsee-proc-macros",
  "jsonrpsee-ws-client",
  "log",
+ "axia-scale-codec",
  "serde",
  "serde_json",
  "sp-core",
@@ -8513,9 +8414,9 @@ dependencies = [
 
 [[package]]
 name = "retain_mut"
-version = "0.1.6"
+version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "51dd4445360338dab5116712bee1388dc727991d51969558a8882ab552e6db30"
+checksum = "8c31b5c4033f8fdde8700e4657be2c497e7288f01515be52168c631e2e4d4086"
 
 [[package]]
 name = "ring"
@@ -8535,7 +8436,8 @@ dependencies = [
 [[package]]
 name = "rlp"
 version = "0.5.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "999508abb0ae792aabed2460c45b89106d97fe4adac593bdaef433c2605847b5"
 dependencies = [
  "bytes 1.1.0",
  "rustc-hex",
@@ -8678,7 +8580,7 @@ dependencies = [
 [[package]]
 name = "sc-allocator"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "log",
  "sp-core",
@@ -8689,17 +8591,16 @@ dependencies = [
 [[package]]
 name = "sc-authority-discovery"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "derive_more",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "ip_network",
  "libp2p",
  "log",
+ "axia-scale-codec",
  "prost",
  "prost-build",
  "rand 0.7.3",
@@ -8711,18 +8612,18 @@ dependencies = [
  "sp-core",
  "sp-keystore",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
 name = "sc-basic-authorship"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "log",
+ "axia-scale-codec",
  "sc-block-builder",
  "sc-client-api",
  "sc-proposer-metrics",
@@ -8734,12 +8635,13 @@ dependencies = [
  "sp-core",
  "sp-inherents",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
 name = "sc-block-builder"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "sc-client-api",
@@ -8755,10 +8657,10 @@ dependencies = [
 [[package]]
 name = "sc-chain-spec"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "impl-trait-for-tuples",
+ "axia-scale-codec",
  "sc-chain-spec-derive",
  "sc-network",
  "sc-telemetry",
@@ -8771,9 +8673,9 @@ dependencies = [
 [[package]]
 name = "sc-chain-spec-derive"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -8782,9 +8684,8 @@ dependencies = [
 [[package]]
 name = "sc-cli"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "chrono",
  "fdlimit",
  "futures 0.3.21",
@@ -8792,6 +8693,7 @@ dependencies = [
  "libp2p",
  "log",
  "names",
+ "axia-scale-codec",
  "rand 0.7.3",
  "regex",
  "rpassword",
@@ -8820,14 +8722,13 @@ dependencies = [
 [[package]]
 name = "sc-client-api"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "fnv",
  "futures 0.3.21",
  "hash-db",
  "log",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-executor",
  "sc-transaction-pool-api",
@@ -8843,21 +8744,22 @@ dependencies = [
  "sp-state-machine",
  "sp-storage",
  "sp-trie",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
 name = "sc-client-db"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-db",
- "axia-scale-codec",
  "hash-db",
  "kvdb",
  "kvdb-memorydb",
  "kvdb-rocksdb",
  "linked-hash-map",
  "log",
+ "axia-db",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-client-api",
  "sc-state-db",
@@ -8873,10 +8775,9 @@ dependencies = [
 [[package]]
 name = "sc-consensus"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axlib-prometheus-endpoint",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "libp2p",
@@ -8891,20 +8792,20 @@ dependencies = [
  "sp-core",
  "sp-runtime",
  "sp-state-machine",
+ "axlib-prometheus-endpoint",
  "thiserror",
 ]
 
 [[package]]
 name = "sc-consensus-aura"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "derive_more",
  "futures 0.3.21",
  "log",
+ "axia-scale-codec",
  "sc-block-builder",
  "sc-client-api",
  "sc-consensus",
@@ -8921,16 +8822,15 @@ dependencies = [
  "sp-inherents",
  "sp-keystore",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
 name = "sc-consensus-babe"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "derive_more",
  "fork-tree",
  "futures 0.3.21",
@@ -8939,6 +8839,7 @@ dependencies = [
  "num-bigint",
  "num-rational 0.2.4",
  "num-traits",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "rand 0.7.3",
  "retain_mut",
@@ -8964,12 +8865,13 @@ dependencies = [
  "sp-keystore",
  "sp-runtime",
  "sp-version",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
 name = "sc-consensus-babe-rpc"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "derive_more",
  "futures 0.3.21",
@@ -8993,10 +8895,10 @@ dependencies = [
 [[package]]
 name = "sc-consensus-epochs"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "fork-tree",
+ "axia-scale-codec",
  "sc-client-api",
  "sc-consensus",
  "sp-blockchain",
@@ -9006,13 +8908,13 @@ dependencies = [
 [[package]]
 name = "sc-consensus-slots"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "log",
+ "axia-scale-codec",
  "sc-client-api",
  "sc-consensus",
  "sc-telemetry",
@@ -9032,7 +8934,7 @@ dependencies = [
 [[package]]
 name = "sc-consensus-uncles"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "sc-client-api",
  "sp-authorship",
@@ -9043,12 +8945,12 @@ dependencies = [
 [[package]]
 name = "sc-executor"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "lazy_static",
  "libsecp256k1 0.6.0",
  "log",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-executor-common",
  "sc-executor-wasmi",
@@ -9069,11 +8971,11 @@ dependencies = [
 [[package]]
 name = "sc-executor-common"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "derive_more",
  "environmental",
+ "axia-scale-codec",
  "pwasm-utils",
  "sc-allocator",
  "sp-core",
@@ -9087,10 +8989,10 @@ dependencies = [
 [[package]]
 name = "sc-executor-wasmi"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "log",
+ "axia-scale-codec",
  "sc-allocator",
  "sc-executor-common",
  "scoped-tls",
@@ -9103,13 +9005,13 @@ dependencies = [
 [[package]]
 name = "sc-executor-wasmtime"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
- "axia-wasm 0.42.2",
  "cfg-if 1.0.0",
  "libc",
  "log",
+ "axia-scale-codec",
+ "axia-wasm 0.42.2",
  "sc-allocator",
  "sc-executor-common",
  "sp-core",
@@ -9121,11 +9023,9 @@ dependencies = [
 [[package]]
 name = "sc-finality-grandpa"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "derive_more",
  "dyn-clone",
  "finality-grandpa",
@@ -9133,6 +9033,7 @@ dependencies = [
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "log",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "rand 0.8.5",
  "sc-block-builder",
@@ -9153,14 +9054,14 @@ dependencies = [
  "sp-finality-grandpa",
  "sp-keystore",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
 name = "sc-finality-grandpa-rpc"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "derive_more",
  "finality-grandpa",
  "futures 0.3.21",
@@ -9169,6 +9070,7 @@ dependencies = [
  "jsonrpc-derive",
  "jsonrpc-pubsub",
  "log",
+ "axia-scale-codec",
  "sc-client-api",
  "sc-finality-grandpa",
  "sc-rpc",
@@ -9182,13 +9084,13 @@ dependencies = [
 [[package]]
 name = "sc-informant"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "ansi_term",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "log",
+ "axia-util-mem",
  "sc-client-api",
  "sc-network",
  "sc-transaction-pool-api",
@@ -9199,7 +9101,7 @@ dependencies = [
 [[package]]
 name = "sc-keystore"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
  "derive_more",
@@ -9214,10 +9116,10 @@ dependencies = [
 [[package]]
 name = "sc-light"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "hash-db",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-client-api",
  "sc-executor",
@@ -9232,13 +9134,11 @@ dependencies = [
 [[package]]
 name = "sc-network"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-std",
  "async-trait",
  "asynchronous-codec 0.5.0",
- "axia-scale-codec",
- "axlib-prometheus-endpoint",
  "bitflags",
  "bytes 1.1.0",
  "cid",
@@ -9255,6 +9155,7 @@ dependencies = [
  "linked_hash_set",
  "log",
  "lru 0.6.6",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "pin-project 1.0.10",
  "prost",
@@ -9274,6 +9175,7 @@ dependencies = [
  "sp-core",
  "sp-finality-grandpa",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
  "thiserror",
  "unsigned-varint 0.6.0",
  "void",
@@ -9283,9 +9185,8 @@ dependencies = [
 [[package]]
 name = "sc-network-gossip"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axlib-prometheus-endpoint",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "libp2p",
@@ -9293,15 +9194,15 @@ dependencies = [
  "lru 0.6.6",
  "sc-network",
  "sp-runtime",
+ "axlib-prometheus-endpoint",
  "tracing",
 ]
 
 [[package]]
 name = "sc-offchain"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "bytes 1.1.0",
  "fnv",
  "futures 0.3.21",
@@ -9311,6 +9212,7 @@ dependencies = [
  "hyper-rustls",
  "log",
  "num_cpus",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "rand 0.7.3",
  "sc-client-api",
@@ -9326,7 +9228,7 @@ dependencies = [
 [[package]]
 name = "sc-peerset"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "futures 0.3.21",
  "libp2p",
@@ -9339,23 +9241,23 @@ dependencies = [
 [[package]]
 name = "sc-proposer-metrics"
 version = "0.9.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axlib-prometheus-endpoint",
  "log",
+ "axlib-prometheus-endpoint",
 ]
 
 [[package]]
 name = "sc-rpc"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "futures 0.3.21",
  "hash-db",
  "jsonrpc-core",
  "jsonrpc-pubsub",
  "log",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-block-builder",
  "sc-chain-spec",
@@ -9379,15 +9281,15 @@ dependencies = [
 [[package]]
 name = "sc-rpc-api"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "futures 0.3.21",
  "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
  "jsonrpc-pubsub",
  "log",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sc-chain-spec",
  "sc-transaction-pool-api",
@@ -9404,9 +9306,8 @@ dependencies = [
 [[package]]
 name = "sc-rpc-server"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axlib-prometheus-endpoint",
  "futures 0.3.21",
  "jsonrpc-core",
  "jsonrpc-http-server",
@@ -9415,18 +9316,16 @@ dependencies = [
  "jsonrpc-ws-server",
  "log",
  "serde_json",
+ "axlib-prometheus-endpoint",
  "tokio",
 ]
 
 [[package]]
 name = "sc-service"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
- "axlib-prometheus-endpoint",
  "directories",
  "exit-future",
  "futures 0.3.21",
@@ -9435,6 +9334,8 @@ dependencies = [
  "jsonrpc-core",
  "jsonrpc-pubsub",
  "log",
+ "axia-scale-codec",
+ "axia-util-mem",
  "parking_lot 0.11.2",
  "pin-project 1.0.10",
  "rand 0.7.3",
@@ -9476,6 +9377,7 @@ dependencies = [
  "sp-transaction-storage-proof",
  "sp-trie",
  "sp-version",
+ "axlib-prometheus-endpoint",
  "tempfile",
  "thiserror",
  "tokio",
@@ -9486,12 +9388,12 @@ dependencies = [
 [[package]]
 name = "sc-state-db"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
- "axia-util-mem-derive 0.1.0 (git+https://github.com/axia-tech/axia-common?branch=master)",
  "log",
+ "axia-scale-codec",
+ "axia-util-mem",
+ "axia-util-mem-derive",
  "parking_lot 0.11.2",
  "sc-client-api",
  "sp-core",
@@ -9500,12 +9402,12 @@ dependencies = [
 [[package]]
 name = "sc-sync-state-rpc"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "jsonrpc-core",
  "jsonrpc-core-client",
  "jsonrpc-derive",
+ "axia-scale-codec",
  "sc-chain-spec",
  "sc-client-api",
  "sc-consensus-babe",
@@ -9522,7 +9424,7 @@ dependencies = [
 [[package]]
 name = "sc-telemetry"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "chrono",
  "futures 0.3.21",
@@ -9540,7 +9442,7 @@ dependencies = [
 [[package]]
 name = "sc-tracing"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "ansi_term",
  "atty",
@@ -9570,9 +9472,9 @@ dependencies = [
 [[package]]
 name = "sc-tracing-proc-macro"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -9581,15 +9483,14 @@ dependencies = [
 [[package]]
 name = "sc-transaction-pool"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
- "axlib-prometheus-endpoint",
  "futures 0.3.21",
  "intervalier",
  "linked-hash-map",
  "log",
+ "axia-scale-codec",
+ "axia-util-mem",
  "parking_lot 0.11.2",
  "retain_mut",
  "sc-client-api",
@@ -9602,13 +9503,14 @@ dependencies = [
  "sp-runtime",
  "sp-tracing",
  "sp-transaction-pool",
+ "axlib-prometheus-endpoint",
  "thiserror",
 ]
 
 [[package]]
 name = "sc-transaction-pool-api"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "derive_more",
  "futures 0.3.21",
@@ -9622,7 +9524,7 @@ dependencies = [
 [[package]]
 name = "sc-utils"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "futures 0.3.21",
  "futures-timer 3.0.2",
@@ -9633,12 +9535,13 @@ dependencies = [
 [[package]]
 name = "scale-info"
 version = "1.0.0"
-source = "git+https://github.com/axia-tech/scale-info?branch=v1.0.0#bee5fa611b8811178471878b34a58d4ba634282b"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5c55b744399c25532d63a0d2789b109df8d46fc93752d46b0782991a931a782f"
 dependencies = [
- "axia-scale-codec",
  "bitvec",
  "cfg-if 1.0.0",
  "derive_more",
+ "axia-scale-codec",
  "scale-info-derive",
  "serde",
 ]
@@ -9646,9 +9549,10 @@ dependencies = [
 [[package]]
 name = "scale-info-derive"
 version = "1.0.0"
-source = "git+https://github.com/axia-tech/scale-info?branch=v1.0.0#bee5fa611b8811178471878b34a58d4ba634282b"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "baeb2780690380592f86205aa4ee49815feb2acad8c2f59e6dd207148c3f1fcd"
 dependencies = [
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -9892,8 +9796,6 @@ name = "shell-runtime"
 version = "0.1.0"
 dependencies = [
  "allychain-info",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "cumulus-pallet-allychain-system",
  "cumulus-pallet-dmp-queue",
  "cumulus-pallet-xcm",
@@ -9903,6 +9805,7 @@ dependencies = [
  "frame-support",
  "frame-system",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-api",
@@ -9916,6 +9819,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -9973,10 +9877,10 @@ checksum = "9def91fd1e018fe007022791f865d0ccc9b3a0d5001e01aabb8b40e46000afb5"
 [[package]]
 name = "slot-range-helper"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "enumn",
+ "axia-scale-codec",
  "paste",
  "sp-runtime",
  "sp-std",
@@ -10076,11 +9980,11 @@ dependencies = [
 [[package]]
 name = "sp-api"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "hash-db",
  "log",
+ "axia-scale-codec",
  "sp-api-proc-macro",
  "sp-core",
  "sp-runtime",
@@ -10093,10 +9997,10 @@ dependencies = [
 [[package]]
 name = "sp-api-proc-macro"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "blake2-rfc",
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -10105,7 +10009,7 @@ dependencies = [
 [[package]]
 name = "sp-application-crypto"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "scale-info",
@@ -10118,11 +10022,11 @@ dependencies = [
 [[package]]
 name = "sp-arithmetic"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "integer-sqrt",
  "num-traits",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-debug-derive",
@@ -10133,7 +10037,7 @@ dependencies = [
 [[package]]
 name = "sp-authority-discovery"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "scale-info",
@@ -10146,7 +10050,7 @@ dependencies = [
 [[package]]
 name = "sp-authorship"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
  "axia-scale-codec",
@@ -10158,7 +10062,7 @@ dependencies = [
 [[package]]
 name = "sp-block-builder"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "sp-api",
@@ -10170,12 +10074,12 @@ dependencies = [
 [[package]]
 name = "sp-blockchain"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "futures 0.3.21",
  "log",
  "lru 0.6.6",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sp-api",
  "sp-consensus",
@@ -10188,13 +10092,13 @@ dependencies = [
 [[package]]
 name = "sp-consensus"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
  "futures 0.3.21",
  "futures-timer 3.0.2",
  "log",
+ "axia-scale-codec",
  "sp-core",
  "sp-inherents",
  "sp-runtime",
@@ -10207,7 +10111,7 @@ dependencies = [
 [[package]]
 name = "sp-consensus-aura"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
  "axia-scale-codec",
@@ -10225,11 +10129,11 @@ dependencies = [
 [[package]]
 name = "sp-consensus-babe"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
  "merlin",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-api",
@@ -10248,7 +10152,7 @@ dependencies = [
 [[package]]
 name = "sp-consensus-slots"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "scale-info",
@@ -10259,7 +10163,7 @@ dependencies = [
 [[package]]
 name = "sp-consensus-vrf"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "schnorrkel",
@@ -10271,10 +10175,8 @@ dependencies = [
 [[package]]
 name = "sp-core"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
  "base58",
  "blake2-rfc",
  "byteorder",
@@ -10284,12 +10186,14 @@ dependencies = [
  "hash-db",
  "hash256-std-hasher",
  "hex",
- "impl-serde 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "impl-serde",
  "lazy_static",
  "libsecp256k1 0.6.0",
  "log",
  "merlin",
  "num-traits",
+ "axia-scale-codec",
+ "axia-util-mem",
  "parking_lot 0.11.2",
  "primitive-types",
  "rand 0.7.3",
@@ -10317,7 +10221,7 @@ dependencies = [
 [[package]]
 name = "sp-database"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "kvdb",
  "parking_lot 0.11.2",
@@ -10326,7 +10230,7 @@ dependencies = [
 [[package]]
 name = "sp-debug-derive"
 version = "3.0.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -10336,10 +10240,10 @@ dependencies = [
 [[package]]
 name = "sp-externalities"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "environmental",
+ "axia-scale-codec",
  "sp-std",
  "sp-storage",
 ]
@@ -10347,11 +10251,11 @@ dependencies = [
 [[package]]
 name = "sp-finality-grandpa"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "finality-grandpa",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "sp-api",
@@ -10365,11 +10269,11 @@ dependencies = [
 [[package]]
 name = "sp-inherents"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
  "impl-trait-for-tuples",
+ "axia-scale-codec",
  "sp-core",
  "sp-runtime",
  "sp-std",
@@ -10379,13 +10283,13 @@ dependencies = [
 [[package]]
 name = "sp-io"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "futures 0.3.21",
  "hash-db",
  "libsecp256k1 0.6.0",
  "log",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "sp-core",
  "sp-externalities",
@@ -10403,7 +10307,7 @@ dependencies = [
 [[package]]
 name = "sp-keyring"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "lazy_static",
  "sp-core",
@@ -10414,13 +10318,13 @@ dependencies = [
 [[package]]
 name = "sp-keystore"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
  "derive_more",
  "futures 0.3.21",
  "merlin",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "schnorrkel",
  "serde",
@@ -10431,7 +10335,7 @@ dependencies = [
 [[package]]
 name = "sp-maybe-compressed-blob"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "zstd",
 ]
@@ -10439,7 +10343,7 @@ dependencies = [
 [[package]]
 name = "sp-npos-elections"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "scale-info",
@@ -10454,9 +10358,9 @@ dependencies = [
 [[package]]
 name = "sp-npos-elections-solution-type"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -10465,7 +10369,7 @@ dependencies = [
 [[package]]
 name = "sp-offchain"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "sp-api",
  "sp-core",
@@ -10475,7 +10379,7 @@ dependencies = [
 [[package]]
 name = "sp-panic-handler"
 version = "3.0.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "backtrace",
 ]
@@ -10483,7 +10387,7 @@ dependencies = [
 [[package]]
 name = "sp-rpc"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "rustc-hash",
  "serde",
@@ -10493,14 +10397,14 @@ dependencies = [
 [[package]]
 name = "sp-runtime"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
- "axia-util-mem 0.10.2 (git+https://github.com/axia-tech/axia-common?branch=master)",
  "either",
  "hash256-std-hasher",
  "impl-trait-for-tuples",
  "log",
+ "axia-scale-codec",
+ "axia-util-mem",
  "paste",
  "rand 0.7.3",
  "scale-info",
@@ -10515,10 +10419,10 @@ dependencies = [
 [[package]]
 name = "sp-runtime-interface"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "impl-trait-for-tuples",
+ "axia-scale-codec",
  "primitive-types",
  "sp-externalities",
  "sp-runtime-interface-proc-macro",
@@ -10532,10 +10436,10 @@ dependencies = [
 [[package]]
 name = "sp-runtime-interface-proc-macro"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "Inflector",
- "proc-macro-crate 1.1.2",
+ "proc-macro-crate 1.1.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -10544,7 +10448,7 @@ dependencies = [
 [[package]]
 name = "sp-serializer"
 version = "3.0.0"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "serde",
  "serde_json",
@@ -10553,7 +10457,7 @@ dependencies = [
 [[package]]
 name = "sp-session"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "scale-info",
@@ -10567,7 +10471,7 @@ dependencies = [
 [[package]]
 name = "sp-staking"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "scale-info",
@@ -10578,12 +10482,12 @@ dependencies = [
 [[package]]
 name = "sp-state-machine"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "hash-db",
  "log",
  "num-traits",
+ "axia-scale-codec",
  "parking_lot 0.11.2",
  "rand 0.7.3",
  "smallvec",
@@ -10601,15 +10505,15 @@ dependencies = [
 [[package]]
 name = "sp-std"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 
 [[package]]
 name = "sp-storage"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
+ "impl-serde",
  "axia-scale-codec",
- "impl-serde 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "ref-cast",
  "serde",
  "sp-debug-derive",
@@ -10619,7 +10523,7 @@ dependencies = [
 [[package]]
 name = "sp-tasks"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "log",
  "sp-core",
@@ -10632,12 +10536,12 @@ dependencies = [
 [[package]]
 name = "sp-timestamp"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
  "futures-timer 3.0.2",
  "log",
+ "axia-scale-codec",
  "sp-api",
  "sp-inherents",
  "sp-runtime",
@@ -10648,7 +10552,7 @@ dependencies = [
 [[package]]
 name = "sp-tracing"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "sp-std",
@@ -10660,7 +10564,7 @@ dependencies = [
 [[package]]
 name = "sp-transaction-pool"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "sp-api",
  "sp-runtime",
@@ -10669,11 +10573,11 @@ dependencies = [
 [[package]]
 name = "sp-transaction-storage-proof"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "async-trait",
- "axia-scale-codec",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-inherents",
@@ -10685,11 +10589,11 @@ dependencies = [
 [[package]]
 name = "sp-trie"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "hash-db",
  "memory-db",
+ "axia-scale-codec",
  "scale-info",
  "sp-core",
  "sp-std",
@@ -10700,11 +10604,11 @@ dependencies = [
 [[package]]
 name = "sp-version"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
+ "impl-serde",
  "axia-scale-codec",
  "axia-wasm 0.42.2",
- "impl-serde 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "scale-info",
  "serde",
  "sp-runtime",
@@ -10716,7 +10620,7 @@ dependencies = [
 [[package]]
 name = "sp-version-proc-macro"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
  "axia-scale-codec",
  "proc-macro2",
@@ -10727,10 +10631,10 @@ dependencies = [
 [[package]]
 name = "sp-wasm-interface"
 version = "4.0.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "impl-trait-for-tuples",
+ "axia-scale-codec",
  "sp-std",
  "wasmi",
 ]
@@ -10744,7 +10648,7 @@ checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
 [[package]]
 name = "ss58-registry"
 version = "1.0.0"
-source = "git+https://github.com/axia-tech/ss58?branch=master#105c7d04e57b51ed4a3fe9a722893d6b7231e58e"
+source = "git+https://github.com/axia-tech/ss58?branch=master#6be4a8da1c0350971ea13da93aedf8d2fdc53094"
 dependencies = [
  "Inflector",
  "proc-macro2",
@@ -10768,8 +10672,6 @@ dependencies = [
  "allychains-common",
  "axia-allychain",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "cumulus-pallet-allychain-system",
  "cumulus-pallet-aura-ext",
  "cumulus-pallet-dmp-queue",
@@ -10806,6 +10708,7 @@ dependencies = [
  "pallet-uniques",
  "pallet-utility",
  "pallet-xcm",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "smallvec",
@@ -10821,6 +10724,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -10834,8 +10738,6 @@ dependencies = [
  "allychains-common",
  "axia-allychain",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "cumulus-pallet-allychain-system",
  "cumulus-pallet-aura-ext",
  "cumulus-pallet-dmp-queue",
@@ -10872,6 +10774,7 @@ dependencies = [
  "pallet-uniques",
  "pallet-utility",
  "pallet-xcm",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "smallvec",
@@ -10887,6 +10790,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -10959,7 +10863,7 @@ version = "0.4.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dcb5ae327f9cc13b68763b5749770cb9e048a99bd9dfdfa58d0cf05d5f64afe0"
 dependencies = [
- "heck",
+ "heck 0.3.3",
  "proc-macro-error",
  "proc-macro2",
  "quote",
@@ -10996,7 +10900,7 @@ version = "0.20.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ee8bc6b87a5112aeeab1f4a9f7ab634fe6cbefc4850006df31267f4cfb9e3149"
 dependencies = [
- "heck",
+ "heck 0.3.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -11008,7 +10912,7 @@ version = "0.21.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d06aaeeee809dbc59eb4556183dd927df67db1540de5be8d3ec0b6636358a5ec"
 dependencies = [
- "heck",
+ "heck 0.3.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -11020,7 +10924,7 @@ version = "0.22.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "339f799d8b549e3744c7ac7feb216383e4005d94bdb22561b3ab8f3b808ae9fb"
 dependencies = [
- "heck",
+ "heck 0.3.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -11037,6 +10941,113 @@ dependencies = [
  "schnorrkel",
  "sha2 0.9.9",
  "zeroize",
+]
+
+[[package]]
+name = "axlib-build-script-utils"
+version = "3.0.0"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
+dependencies = [
+ "platforms",
+]
+
+[[package]]
+name = "axlib-frame-rpc-system"
+version = "4.0.0-dev"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
+dependencies = [
+ "frame-system-rpc-runtime-api",
+ "futures 0.3.21",
+ "jsonrpc-core",
+ "jsonrpc-core-client",
+ "jsonrpc-derive",
+ "log",
+ "axia-scale-codec",
+ "sc-client-api",
+ "sc-rpc-api",
+ "sc-transaction-pool-api",
+ "sp-api",
+ "sp-block-builder",
+ "sp-blockchain",
+ "sp-core",
+ "sp-runtime",
+]
+
+[[package]]
+name = "axlib-prometheus-endpoint"
+version = "0.9.0"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
+dependencies = [
+ "async-std",
+ "derive_more",
+ "futures-util",
+ "hyper",
+ "log",
+ "prometheus",
+ "tokio",
+]
+
+[[package]]
+name = "axlib-test-client"
+version = "2.0.1"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
+dependencies = [
+ "async-trait",
+ "futures 0.3.21",
+ "hex",
+ "axia-scale-codec",
+ "sc-client-api",
+ "sc-client-db",
+ "sc-consensus",
+ "sc-executor",
+ "sc-light",
+ "sc-offchain",
+ "sc-service",
+ "serde",
+ "serde_json",
+ "sp-blockchain",
+ "sp-consensus",
+ "sp-core",
+ "sp-keyring",
+ "sp-keystore",
+ "sp-runtime",
+ "sp-state-machine",
+]
+
+[[package]]
+name = "axlib-test-utils"
+version = "4.0.0-dev"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
+dependencies = [
+ "futures 0.3.21",
+ "axlib-test-utils-derive",
+ "tokio",
+]
+
+[[package]]
+name = "axlib-test-utils-derive"
+version = "0.10.0-dev"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
+dependencies = [
+ "proc-macro-crate 1.1.3",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "axlib-wasm-builder"
+version = "5.0.0-dev"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
+dependencies = [
+ "ansi_term",
+ "build-helper",
+ "cargo_metadata",
+ "sp-maybe-compressed-blob",
+ "tempfile",
+ "toml",
+ "walkdir",
+ "wasm-gc-api",
 ]
 
 [[package]]
@@ -11089,16 +11100,16 @@ dependencies = [
  "cfg-if 1.0.0",
  "fastrand",
  "libc",
- "redox_syscall 0.2.10",
+ "redox_syscall 0.2.11",
  "remove_dir_all",
  "winapi 0.3.9",
 ]
 
 [[package]]
 name = "termcolor"
-version = "1.1.2"
+version = "1.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2dfed899f0eb03f32ee8c6a0aabdb8a7949659e3466561fc0adf54e26d88c5f4"
+checksum = "bab24d30b911b2376f3a13cc2cd443142f0c81dda04c118693e35b3835757755"
 dependencies = [
  "winapi-util",
 ]
@@ -11307,9 +11318,9 @@ checksum = "360dfd1d6d30e05fda32ace2c8c70e9c0a9da713275777f5a4dbb8a1893930c6"
 
 [[package]]
 name = "tracing"
-version = "0.1.31"
+version = "0.1.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f6c650a8ef0cd2dd93736f033d21cbd1224c5a967aa0c258d00fcf7dafef9b9f"
+checksum = "4a1bdf54a7c28a2bbf701e1d2233f6c77f473486b94bee4f9678da5a148dca7f"
 dependencies = [
  "cfg-if 1.0.0",
  "pin-project-lite 0.2.8",
@@ -11319,9 +11330,9 @@ dependencies = [
 
 [[package]]
 name = "tracing-attributes"
-version = "0.1.19"
+version = "0.1.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8276d9a4a3a558d7b7ad5303ad50b53d58264641b82914b7ada36bd762e7a716"
+checksum = "2e65ce065b4b5c53e73bb28912318cb8c9e9ad3921f1d669eb0e68b4c8143a2b"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -11330,9 +11341,9 @@ dependencies = [
 
 [[package]]
 name = "tracing-core"
-version = "0.1.22"
+version = "0.1.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "03cfcb51380632a72d3111cb8d3447a8d908e577d31beeac006f836383d29a23"
+checksum = "aa31669fa42c09c34d94d8165dd2012e8ff3c66aca50f3bb226b68f216f2706c"
 dependencies = [
  "lazy_static",
  "valuable",
@@ -11394,7 +11405,8 @@ dependencies = [
 [[package]]
 name = "trie-db"
 version = "0.22.6"
-source = "git+https://github.com/axia-tech/trie?branch=master#ee16fe53f6bfc3cfba00fa80fcea6998244c7eb2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9eac131e334e81b6b3be07399482042838adcd7957aa0010231d0813e39e02fa"
 dependencies = [
  "hash-db",
  "hashbrown",
@@ -11406,7 +11418,8 @@ dependencies = [
 [[package]]
 name = "trie-root"
 version = "0.16.0"
-source = "git+https://github.com/axia-tech/trie?branch=master#ee16fe53f6bfc3cfba00fa80fcea6998244c7eb2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "652931506d2c1244d7217a70b99f56718a7b4161b37f04e7cd868072a99f68cd"
 dependencies = [
  "hash-db",
 ]
@@ -11463,11 +11476,11 @@ checksum = "59547bce71d9c38b83d9c0e92b6066c4253371f15005def0c30d9657f50c7642"
 [[package]]
 name = "try-runtime-cli"
 version = "0.10.0-dev"
-source = "git+https://github.com/axia-tech/axlib?branch=dev#e9dbbe4a3149926b095beb978596d4550d648ac9"
+source = "git+https://github.com/axia-tech/axia-core?branch=dev#8c468fd5c742122dfd521332db5b8c1d4cc38ec5"
 dependencies = [
- "axia-scale-codec",
  "jsonrpsee-ws-client",
  "log",
+ "axia-scale-codec",
  "remote-externalities",
  "sc-chain-spec",
  "sc-cli",
@@ -11506,17 +11519,6 @@ name = "ucd-trie"
 version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "56dee185309b50d1f11bfedef0fe6d036842e3fb77413abef29f8f8d1c5d4c1c"
-
-[[package]]
-name = "uint"
-version = "0.9.1"
-source = "git+https://github.com/axia-tech/axia-common?branch=master#22e9ba1e4f54890265f7405727857a02dd4846b3"
-dependencies = [
- "byteorder",
- "crunchy",
- "hex",
- "static_assertions",
-]
 
 [[package]]
 name = "uint"
@@ -11798,10 +11800,11 @@ checksum = "3d958d035c4438e28c70e4321a2911302f10135ce78a9c7834c0cab4123d06a2"
 [[package]]
 name = "wasm-gc-api"
 version = "0.1.11"
-source = "git+https://github.com/axia-tech/wasm-gc?branch=master#2cc66ca0a6700454ed48b4a8053f2f2d00317fcc"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d0c32691b6c7e6c14e7f8fd55361a9088b507aa49620fcd06c09b3a1082186b9"
 dependencies = [
- "axia-wasm 0.32.0",
  "log",
+ "axia-wasm 0.32.0",
  "rustc-demangle",
 ]
 
@@ -11823,21 +11826,23 @@ dependencies = [
 [[package]]
 name = "wasmi"
 version = "0.9.1"
-source = "git+https://github.com/axia-tech/wasmi?branch=v0.9.1#86a4f6400b4c4affd7d8940bb192f6fdda79e322"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ca00c5147c319a8ec91ec1a0edbec31e566ce2c9cc93b3f9bb86a9efd0eb795d"
 dependencies = [
- "axia-wasm 0.42.2",
  "downcast-rs",
  "libc",
  "memory_units",
  "num-rational 0.2.4",
  "num-traits",
+ "axia-wasm 0.42.2",
  "wasmi-validation",
 ]
 
 [[package]]
 name = "wasmi-validation"
 version = "0.4.1"
-source = "git+https://github.com/axia-tech/wasmi?branch=v0.9.1#86a4f6400b4c4affd7d8940bb192f6fdda79e322"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "165343ecd6c018fc09ebcae280752702c9a2ef3e6f8d02f1cfcbdb53ef6d7937"
 dependencies = [
  "axia-wasm 0.42.2",
 ]
@@ -12050,8 +12055,6 @@ dependencies = [
  "allychains-common",
  "axia-allychain",
  "axia-runtime-common",
- "axia-scale-codec",
- "axlib-wasm-builder",
  "cumulus-pallet-allychain-system",
  "cumulus-pallet-aura-ext",
  "cumulus-pallet-dmp-queue",
@@ -12088,6 +12091,7 @@ dependencies = [
  "pallet-uniques",
  "pallet-utility",
  "pallet-xcm",
+ "axia-scale-codec",
  "scale-info",
  "serde",
  "smallvec",
@@ -12103,6 +12107,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "axlib-wasm-builder",
  "xcm",
  "xcm-builder",
  "xcm-executor",
@@ -12207,12 +12212,12 @@ dependencies = [
 [[package]]
 name = "xcm"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "derivative",
  "impl-trait-for-tuples",
  "log",
+ "axia-scale-codec",
  "scale-info",
  "xcm-procedural",
 ]
@@ -12220,14 +12225,14 @@ dependencies = [
 [[package]]
 name = "xcm-builder"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "axia-allychain",
- "axia-scale-codec",
  "frame-support",
  "frame-system",
  "log",
  "pallet-transaction-payment",
+ "axia-scale-codec",
  "scale-info",
  "sp-arithmetic",
  "sp-io",
@@ -12240,13 +12245,13 @@ dependencies = [
 [[package]]
 name = "xcm-executor"
 version = "0.9.12"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
- "axia-scale-codec",
  "frame-benchmarking",
  "frame-support",
  "impl-trait-for-tuples",
  "log",
+ "axia-scale-codec",
  "sp-arithmetic",
  "sp-core",
  "sp-io",
@@ -12258,7 +12263,7 @@ dependencies = [
 [[package]]
 name = "xcm-procedural"
 version = "0.1.0"
-source = "git+https://github.com/axia-tech/axia?branch=dev#b6d788a88fccc5c9b5dcc5bb0653fdb0bf88ae6d"
+source = "git+https://github.com/axia-tech/axia?branch=dev#c4e22580b3c6cd517cc901daef0f907b61d16c1e"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -12281,9 +12286,9 @@ dependencies = [
 
 [[package]]
 name = "zeroize"
-version = "1.5.2"
+version = "1.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7c88870063c39ee00ec285a2f8d6a966e5b6fb2becc4e8dac77ed0d370ed6006"
+checksum = "50344758e2f40e3a1fcfc8f6f91aa57b5f8ebd8d27919fe6451f15aaaf9ee608"
 dependencies = [
  "zeroize_derive",
 ]
